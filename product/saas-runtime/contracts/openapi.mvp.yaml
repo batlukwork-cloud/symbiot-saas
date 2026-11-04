@@ -1,0 +1,254 @@
+openapi: 3.1.0
+info:
+  title: Symbiot Runtime MVP API
+  version: 0.1.0-g3
+paths:
+  /health:
+    get:
+      summary: Runtime health
+  /processes:
+    get:
+      summary: List process catalog
+  /processes/{process_id}:
+    get:
+      summary: Get process card
+  /task-runs:
+    post:
+      summary: Start managed task run
+  /task-runs/intake-preview:
+    post:
+      summary: Preview task intake, selected workgroup and readiness gates before launch
+      description: Product-Fit endpoint that validates required task fields, selects runtime roles from the Symbiot role directory and returns the basis for launching a managed TaskRun.
+  /task-runs/{task_run_id}:
+    get:
+      summary: Get task run status, stages and gates
+  /task-runs/{task_run_id}/result-center:
+    get:
+      summary: Get product TaskRun monitor, result, evidence, acceptance checklist and user actions
+      description: G3 Product-Fit endpoint that turns execution output into a managed user-facing Result Center.
+  /task-runs/{task_run_id}/result-actions/{action_id}:
+    post:
+      summary: Apply a Result Center user action and persist action evidence
+      description: Records acceptance, revision, next-task or export-evidence decisions as auditable product actions and returns the updated Result Center. The create-next-task action may include an editable follow-up brief with goal, expected artifact, source context and urgency.
+  /documents:
+    get:
+      summary: List indexed knowledge documents
+  /documents/ingest:
+    post:
+      summary: Ingest plain text document into the MVP RAG index
+      description: G3 endpoint backed by SQLite storage. Production implementation must add vector index, upload scanning and stronger tenant isolation.
+  /documents/storage-status:
+    get:
+      summary: Get persistent document storage status
+  /documents/upload-policy/check:
+    post:
+      summary: Check file metadata against ASVS/NIST upload and OCR policy
+  /documents/upload:
+    post:
+      summary: Upload a binary file into runtime storage and create OCR/scan evidence
+  /documents/upload-runtime-status:
+    get:
+      summary: Get upload storage, scanner adapter and OCR dispatcher status
+  /documents/uploads:
+    get:
+      summary: List runtime uploaded files
+  /documents/uploads/{file_id}/approve-rag:
+    post:
+      summary: Approve uploaded client text and release it into RAG index
+  /documents/ocr-jobs:
+    get:
+      summary: List OCR/UKR dispatch jobs
+  /documents/ocr-worker-status:
+    get:
+      summary: Get OCR execution worker status and current pipeline path
+  /documents/ocr-jobs/execute-next:
+    post:
+      summary: Execute the next queued OCR job and index extracted text into RAG
+  /documents/ocr-jobs/{job_id}/execute:
+    post:
+      summary: Execute a specific OCR job; index only clean text or create approval block when PII is found
+  /documents/ocr-jobs/{job_id}/approve-rag:
+    post:
+      summary: Approve post-OCR client data and release it into RAG index
+  /rag/search:
+    get:
+      summary: Search indexed source chunks
+      description: Uses live PostgreSQL/pgvector when connected, otherwise exposes explicit SQLite fallback status for G3 evidence.
+  /rag/vector-status:
+    get:
+      summary: Get RAG vector index status
+  /rag/embedding-status:
+    get:
+      summary: Get embedding provider and pgvector migration readiness status
+  /rag/pgvector-migration.sql:
+    get:
+      summary: Get the pgvector migration SQL for production vector storage
+  /rag/pgvector-status:
+    get:
+      summary: Get live PostgreSQL/pgvector connection, migration and synchronization status
+  /rag/pgvector/apply-migration:
+    post:
+      summary: Apply the pgvector migration to the configured PostgreSQL database
+  /rag/pgvector/sync:
+    post:
+      summary: Synchronize the SQLite MVP knowledge store into live pgvector tables
+  /rag/eval-set:
+    get:
+      summary: Get the versioned RAG semantic evaluation set
+  /rag/eval-thresholds:
+    get:
+      summary: Get RAG eval thresholds and client-pilot acceptance gates
+  /rag/evaluate:
+    post:
+      summary: Run RAG semantic search evaluation and return pass rate / MRR evidence
+  /rag/eval-history:
+    get:
+      summary: Get recent RAG evaluation monitoring history
+  /rag/provider-governance:
+    get:
+      summary: Get provider governance, NIST AI RMF and client-data readiness status
+  /rag/evidence/{task_run_id}:
+    get:
+      summary: Get RAG evidence for a task run
+  /llm-gateway/evidence/{task_run_id}:
+    get:
+      summary: Get LLM Gateway provider, prompt and redaction evidence
+      parameters:
+        - name: provider_id
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional provider id. Not configured providers must fallback without exposing secrets.
+  /quality/gates:
+    get:
+      summary: List executable quality gate catalog mapped to standards
+  /quality/evidence/{task_run_id}:
+    get:
+      summary: Get quality gate evidence for a task run
+  /security/status:
+    get:
+      summary: Get runtime security/session/tenant control status
+      description: Public safe status endpoint; secrets and tokens are not exposed.
+  /security/identity-provider/status:
+    get:
+      summary: Get production IAM/SSO readiness status
+      description: Exposes safe identity-provider mode, JWT validation readiness, OIDC/JWT configuration booleans, required claims and the stop condition before client-data pilot.
+  /security/identity-provider/keycloak-bootstrap:
+    get:
+      summary: Get Keycloak realm bootstrap package readiness status
+      description: Verifies the versioned Keycloak realm import package, runtime client, required claims, roles and bootstrap users without exposing secrets.
+  /security/identity-provider/production-readiness:
+    get:
+      summary: Get production HTTPS Keycloak endpoint readiness status
+      description: Verifies OIDC mode, production-like HTTPS issuer/JWKS URLs, no inline JWKS shortcut, bootstrap package and live remote JWKS keys.
+  /security/session-check:
+    get:
+      summary: Verify authenticated runtime session and tenant scope
+      description: Requires demo x-symbiot-session/x-tenant-id headers in demo mode or Authorization Bearer JWT in OIDC mode.
+  /security/headers-evidence:
+    get:
+      summary: Return redacted header evidence for ASVS session logging
+  /security/access-policies:
+    get:
+      summary: List process RBAC/ABAC access policies
+  /security/access-policy-store-status:
+    get:
+      summary: Get persistent access policy storage status
+  /security/role-directory/status:
+    get:
+      summary: Get Symbiot runtime role directory status
+  /security/role-directory/coverage:
+    get:
+      summary: Get Symbiot runtime role permission coverage
+  /security/role-directory/admin-status:
+    get:
+      summary: Get persistent role directory admin workflow status
+  /security/role-directory/audit:
+    get:
+      summary: List role directory admin audit events
+  /security/role-directory/audit/verify:
+    get:
+      summary: Verify SHA256 hash-chain integrity of role directory admin audit
+  /security/role-directory/roles/{runtime_role}:
+    patch:
+      summary: Admin-only update of an existing runtime role override
+  /security/role-directory:
+    get:
+      summary: List runtime roles mapped to Symbiot role references
+  /security/access-policy-directory-validation:
+    get:
+      summary: Validate access policies against the runtime role directory
+  /security/access-policies/{process_id}:
+    post:
+      summary: Admin-only update of a process access policy
+  /security/access-policy-audit:
+    get:
+      summary: List access policy audit events
+  /security/access-policy-audit/verify:
+    get:
+      summary: Verify SHA256 hash-chain integrity of access policy audit events
+  /security/access-check:
+    get:
+      summary: Evaluate access to a process for the current session
+  /runtime/evidence/{task_run_id}:
+    get:
+      summary: Get aggregate RAG, LLM, Quality and Audit evidence
+  /data-protection/status:
+    get:
+      summary: Get PII classifier, approval workflow and export block status
+      description: G3 client-data control endpoint mapped to OWASP ASVS V8/V4/V10 and NIST AI RMF Govern/Map/Manage.
+  /data-protection/pii/classify:
+    post:
+      summary: Classify text for PII and return redacted content
+      description: Detects MVP PII types before external export and records gate evidence.
+  /data-protection/approvals:
+    post:
+      summary: Create human approval request for controlled export
+  /data-protection/approvals/{approval_id}/approve:
+    post:
+      summary: Record named reviewer approval decision
+  /data-protection/exports/check:
+    post:
+      summary: Decide whether artifact export is blocked or allowed
+      description: Blocks external export when PII exists and named approval is missing.
+  /artifacts/{artifact_id}:
+    get:
+      summary: Get generated artifact with sources and checks
+  /artifacts/{artifact_id}/versions:
+    get:
+      summary: List artifact version records and content hashes
+  /audit-events:
+    get:
+      summary: List redacted audit events
+  /audit-events/retention-status:
+    get:
+      summary: Get MVP audit retention status and production retention stop condition
+      description: Exposes internal evidence retention mode, SHA256 audit head hash and explicit block on external audit export.
+  /audit-events/persistence-status:
+    get:
+      summary: Get persistent audit storage status
+      description: Verifies SQLite-backed audit event persistence, hash-chain validity and pending production retention schedule approval.
+  /audit-events/access-model-status:
+    get:
+      summary: Get internal evidence access model status
+      description: Exposes roles allowed to view evidence status, download internal evidence packages and confirms external evidence export is blocked.
+  /audit-events/access-check:
+    get:
+      summary: Check evidence access for current session
+      description: Records a persistent audit decision for evidence status, event view, internal package download or blocked external export.
+  /audit-events/access-audit:
+    get:
+      summary: List evidence access audit events
+      description: Returns persistent audit events for evidence access decisions.
+  /audit-events/access-audit/verify:
+    get:
+      summary: Verify evidence access audit hash chain
+      description: Verifies SHA256 hash-chain integrity for evidence access audit events.
+  /audit-events/export-package:
+    get:
+      summary: Build internal audit evidence export package
+      description: Returns redacted audit event chain hashes and package hash for release evidence. External export remains blocked until separate approval.
+  /admin/llm-providers:
+    get:
+      summary: List configured LLM providers without exposing secrets

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "proof": "local connector routes create decision card and Human Gate creates mission contract draft without runtime or Obsidian writes",
+  "routes": {
+    "post_event": true,
+    "get_inbox": true,
+    "get_card": true,
+    "post_decision_accept": true
+  },
+  "dispatch_event_id": "dispatch_evt_3f18c4eeea2fc88e",
+  "decision_card_id": "decision_card_335629d29d4c89ed",
+  "mission_contract_draft_id": "mission_contract_draft_6d44dd27101d9f95",
+  "runtime_started": false,
+  "blocked_reason": "MISSION_CONTRACT_DRAFT_ONLY",
+  "obsidian_writes": 0,
+  "model_calls": 0,
+  "audit_records": 2,
+  "production_touched": false,
+  "secrets_touched": false,
+  "supabase_live_touched": false,
+  "external_webhook_touched": false,
+  "real_personal_data_used": false,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false
+}

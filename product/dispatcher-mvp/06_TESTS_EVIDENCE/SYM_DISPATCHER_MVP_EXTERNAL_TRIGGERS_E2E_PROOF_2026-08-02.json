@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "proof": "Telegram update and email spool triggers complete the full local Dispatcher chain",
+  "manual_url_tested": "http://127.0.0.1:8788/",
+  "ui_triggers_tested": [
+    "telegram",
+    "email"
+  ],
+  "ui_full_chain_completed": true,
+  "ui_sandbox_writes_each": 6,
+  "telegram": {
+    "dispatch_event_id": "dispatch_evt_6de6d3ed3170b1c6",
+    "mission_run_id": "mission_run_93e9e65672b5409c",
+    "artifact_count": 6
+  },
+  "email": {
+    "dispatch_event_id": "dispatch_evt_308adc8caa04fe61",
+    "mission_run_id": "mission_run_a4118edcc3215ceb",
+    "artifact_count": 6
+  },
+  "adapters": {
+    "telegram": {
+      "mode": "local_update_endpoint",
+      "token_present": false,
+      "webhook_used": false
+    },
+    "email": {
+      "mode": "local_spool",
+      "imap_present": false,
+      "spool_dir": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\01_CONNECTOR_SERVICE\\local_inbox\\email"
+    }
+  },
+  "production_touched": false,
+  "secrets_touched": false,
+  "supabase_live_touched": false,
+  "external_webhook_touched": false,
+  "real_personal_data_used": false,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false
+}

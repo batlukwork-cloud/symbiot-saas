@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Диспетчерская Симбиота</title>
+    <link rel="stylesheet" href="./dispatcher_mock_ui.css" />
+  </head>
+  <body data-runtime-started="false" data-obsidian-writes="0">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SYM-SaaS / Dispatcher MVP</p>
+        <h1>Диспетчерская Симбиота</h1>
+      </div>
+      <nav class="topnav" aria-label="Разделы">
+        <button type="button" class="selected" data-view="dispatcher">Диспетчерская</button>
+        <button type="button" data-view="sources">Источники</button>
+      </nav>
+      <div class="status-strip" aria-label="Статус контура">
+        <span class="status-pill neutral">LLM OFF</span>
+        <span class="status-pill stop" id="runtimeStatus">Runtime остановлен</span>
+        <span class="status-pill neutral">Obsidian 0</span>
+      </div>
+    </header>
+
+    <main class="workspace" id="dispatcherView" aria-label="Рабочее место диспетчера">
+      <section class="inbox-pane" aria-label="Входящие события">
+        <div class="pane-title">
+          <h2>Входящие</h2>
+          <span class="counter" id="inboxCounter">1</span>
+        </div>
+
+        <div class="adapter-actions" aria-label="Триггеры">
+          <button type="button" data-action="telegram-demo" id="telegramDemoButton">Telegram</button>
+          <button type="button" data-action="email-demo" id="emailDemoButton">Email</button>
+        </div>
+
+        <button class="inbox-item selected" id="selectedInboxItem" type="button" data-event-id="dispatch_evt_3f18c4eeea2fc88e">
+          <span class="channel">Telegram</span>
+          <strong id="inboxTitle">Проверка договора</strong>
+          <span class="muted" id="inboxMeta">Demo Sender - 2026-08-02 10:00</span>
+          <span class="summary" id="inboxSummary">Проверь договор и собери пакет документов</span>
+        </button>
+      </section>
+
+      <section class="decision-pane" aria-label="Карточка решения">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Карточка решения</p>
+            <h2 id="decisionTitle">Incoming telegram event</h2>
+          </div>
+          <span class="status-pill wait">Human Gate</span>
+        </div>
+
+        <dl class="decision-grid">
+          <div>
+            <dt>Источник</dt>
+            <dd id="sourceValue">Telegram / Demo Sender</dd>
+          </div>
+          <div>
+            <dt>Понято</dt>
+            <dd id="summaryValue">Проверь договор и собери пакет документов</dd>
+          </div>
+          <div>
+            <dt>Предложение</dt>
+            <dd id="suggestedActionValue">Подготовить черновик mission contract</dd>
+          </div>
+          <div>
+            <dt>Ограничение</dt>
+            <dd>Исполнение и запись в Obsidian ждут отдельного разрешения</dd>
+          </div>
+        </dl>
+
+        <div class="action-row" aria-label="Действия Human Gate">
+          <button class="primary-action" id="acceptDraftButton" type="button" data-action="human-gate-accept">
+            <span aria-hidden="true">✓</span>
+            Подтвердить черновик
+          </button>
+          <button type="button" data-action="correct">✎</button>
+          <button type="button" data-action="clarify">?</button>
+          <button type="button" data-action="defer">⏱</button>
+          <button type="button" data-action="archive">□</button>
+        </div>
+      </section>
+
+      <section class="contract-pane" id="contractDraft" aria-label="Черновик mission contract" hidden>
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Черновик mission contract</p>
+            <h2 id="draftId">mission_contract_draft_6d44dd27101d9f95</h2>
+          </div>
+          <span class="status-pill stop">Draft only</span>
+        </div>
+
+        <dl class="decision-grid compact">
+          <div>
+            <dt>Цель</dt>
+            <dd id="draftGoal">Проверь договор и собери пакет документов</dd>
+          </div>
+          <div>
+            <dt>Роли</dt>
+            <dd>Dispatcher, Methodologist, Quality Controller</dd>
+          </div>
+          <div>
+            <dt>Бюджет</dt>
+            <dd>Не выделен в mock proof</dd>
+          </div>
+          <div>
+            <dt>Права</dt>
+            <dd>Runtime: no; Obsidian write: no; webhook: no</dd>
+          </div>
+        </dl>
+
+        <div class="action-row contract-actions" aria-label="Запуск локальной миссии">
+          <button class="primary-action" id="startMissionButton" type="button" data-action="mission-start">
+            <span aria-hidden="true">▶</span>
+            Запустить локальную миссию
+          </button>
+        </div>
+      </section>
+
+      <section class="contract-pane result-pane" id="missionResult" aria-label="Результат локальной миссии" hidden>
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Результат</p>
+            <h2 id="missionRunId">mission_run</h2>
+          </div>
+          <span class="status-pill neutral">Sandbox complete</span>
+        </div>
+
+        <dl class="decision-grid compact">
+          <div>
+            <dt>Папка</dt>
+            <dd id="missionFolder">sandbox_obsidian_vault</dd>
+          </div>
+          <div>
+            <dt>Артефакты</dt>
+            <dd id="artifactCount">0</dd>
+          </div>
+          <div>
+            <dt>Итог</dt>
+            <dd id="missionSummary">Локальная миссия завершена.</dd>
+          </div>
+          <div>
+            <dt>Ограничения</dt>
+            <dd>Production: no; Supabase live: no; webhook: no</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <main class="sources-workspace" id="sourcesView" aria-label="Источники" hidden>
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>Telegram</h2>
+          </div>
+          <span class="status-pill wait" id="telegramSourceStatus">Не подключен</span>
+        </div>
+
+        <label class="field-label" for="telegramTokenInput">Bot token</label>
+        <input id="telegramTokenInput" class="source-input" type="password" autocomplete="off" placeholder="Вставь token из BotFather" />
+
+        <div class="action-row source-actions">
+          <button class="primary-action" id="connectTelegramButton" type="button">Подключить</button>
+          <button type="button" id="testTelegramButton">Проверить</button>
+          <button type="button" id="chainTelegramButton">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="telegramSourceNote">Token хранится только в памяти локального процесса.</p>
+      </section>
+
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>Email</h2>
+          </div>
+          <span class="status-pill wait" id="emailSourceStatus">Spool готов</span>
+        </div>
+
+        <label class="field-label" for="emailSpoolPath">Spool folder</label>
+        <input id="emailSpoolPath" class="source-input" type="text" readonly />
+
+        <div class="action-row source-actions">
+          <button class="primary-action" id="connectEmailButton" type="button">Подключить</button>
+          <button type="button" id="testEmailButton">Проверить</button>
+          <button type="button" id="chainEmailButton">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="emailSourceNote">JSON-письма из spool превращаются в события Диспетчерской.</p>
+      </section>
+
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>WhatsApp</h2>
+          </div>
+          <span class="status-pill wait" id="whatsappSourceStatus">Локальный вход</span>
+        </div>
+
+        <label class="field-label" for="whatsappEndpointPath">Endpoint</label>
+        <input id="whatsappEndpointPath" class="source-input" type="text" readonly value="/api/whatsapp/update" />
+
+        <div class="action-row source-actions">
+          <button type="button" data-source-chain="whatsapp">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="whatsappSourceNote">Принимает WhatsApp Cloud API-совместимый update в локальном режиме.</p>
+      </section>
+
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>Webhook</h2>
+          </div>
+          <span class="status-pill wait" id="webhookSourceStatus">Локальный вход</span>
+        </div>
+
+        <label class="field-label" for="webhookEndpointPath">Endpoint</label>
+        <input id="webhookEndpointPath" class="source-input" type="text" readonly value="/api/webhook/event" />
+
+        <div class="action-row source-actions">
+          <button type="button" data-source-chain="webhook">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="webhookSourceNote">Принимает универсальное JSON-событие без внешней публикации webhook.</p>
+      </section>
+
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>Папка</h2>
+          </div>
+          <span class="status-pill wait" id="folderSourceStatus">Spool готов</span>
+        </div>
+
+        <label class="field-label" for="folderSpoolPath">Spool folder</label>
+        <input id="folderSpoolPath" class="source-input" type="text" readonly />
+
+        <div class="action-row source-actions">
+          <button type="button" data-source-chain="folder">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="folderSourceNote">TXT/JSON-файлы из локальной папки превращаются в события Диспетчерской.</p>
+      </section>
+
+      <section class="source-card">
+        <div class="decision-header">
+          <div>
+            <p class="eyebrow">Источник</p>
+            <h2>Bitrix24</h2>
+          </div>
+          <span class="status-pill wait" id="bitrix24SourceStatus">Локальный вход</span>
+        </div>
+
+        <label class="field-label" for="bitrix24EndpointPath">Endpoint</label>
+        <input id="bitrix24EndpointPath" class="source-input" type="text" readonly value="/api/bitrix24/event" />
+
+        <div class="action-row source-actions">
+          <button type="button" data-source-chain="bitrix24">Прозвонить цепочку</button>
+        </div>
+
+        <p class="source-note" id="bitrix24SourceNote">Принимает Bitrix24-совместимое событие задачи в локальном режиме.</p>
+      </section>
+    </main>
+
+    <footer class="footer-state" id="footerState">
+      Ожидает Human Gate. Runtime не запущен.
+    </footer>
+
+    <script src="./dispatcher_mock_ui.js"></script>
+  </body>
+</html>

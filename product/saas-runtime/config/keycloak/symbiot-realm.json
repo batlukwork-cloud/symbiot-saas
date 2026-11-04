@@ -1,0 +1,122 @@
+{
+  "realm": "symbiot",
+  "enabled": true,
+  "displayName": "Symbiot Runtime",
+  "registrationAllowed": false,
+  "resetPasswordAllowed": true,
+  "sslRequired": "external",
+  "roles": {
+    "realm": [
+      { "name": "admin", "description": "Full runtime administration" },
+      { "name": "role-admin", "description": "Runtime role and policy administration" },
+      { "name": "runtime-operator", "description": "Standard runtime operator" },
+      { "name": "qa-lead", "description": "Internal QA and evidence package access" },
+      { "name": "observer", "description": "Read-only limited observer" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "symbiot-runtime",
+      "name": "Symbiot Runtime MVP",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "redirectUris": [
+        "http://127.0.0.1:3000/*",
+        "https://symbiot.example.ru/*"
+      ],
+      "webOrigins": [
+        "http://127.0.0.1:3000",
+        "https://symbiot.example.ru"
+      ],
+      "protocolMappers": [
+        {
+          "name": "tenant_id",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "tenant_id",
+            "claim.name": "tenant_id",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "name": "access_level",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "access_level",
+            "claim.name": "access_level",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "name": "roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "multivalued": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "symbiot-admin",
+      "enabled": false,
+      "emailVerified": false,
+      "firstName": "Symbiot",
+      "lastName": "Admin",
+      "email": "admin@example.local",
+      "attributes": {
+        "tenant_id": ["tenant:demo"],
+        "access_level": ["admin"]
+      },
+      "realmRoles": ["admin", "role-admin"]
+    },
+    {
+      "username": "symbiot-operator",
+      "enabled": false,
+      "emailVerified": false,
+      "firstName": "Symbiot",
+      "lastName": "Operator",
+      "email": "operator@example.local",
+      "attributes": {
+        "tenant_id": ["tenant:demo"],
+        "access_level": ["standard"]
+      },
+      "realmRoles": ["runtime-operator"]
+    },
+    {
+      "username": "symbiot-qa",
+      "enabled": false,
+      "emailVerified": false,
+      "firstName": "Symbiot",
+      "lastName": "QA",
+      "email": "qa@example.local",
+      "attributes": {
+        "tenant_id": ["tenant:demo"],
+        "access_level": ["manager"]
+      },
+      "realmRoles": ["qa-lead"]
+    }
+  ]
+}

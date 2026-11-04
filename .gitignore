@@ -1,0 +1,66 @@
+# --- окружения и секреты ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+venv/
+.venv/
+venv_*/
+.venv_*/
+
+# --- зависимости и сборки ---
+node_modules/
+.next/
+out/
+dist/
+build/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- данные и рантайм ---
+data/
+runtime_logs/
+runtime_data/
+runtime_services/
+test_vault/
+local_inbox/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+sandbox_*
+
+# --- бинарники и установщики ---
+*.exe
+*.dll
+*.pyd
+*.node
+*.msi
+*.pak
+*.asar
+*.zip
+*.7z
+*.rar
+
+# --- служебное ОС/редакторов ---
+._*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# --- карты доступа и локальные секреты (в публичный репозиторий не идут) ---
+docs/06_management/90_SECRETS_LOCAL/
+docs/06_management/API_KEYS_LOCATION_MAP_SYM_SAAS.md
+*SECRETS_LOCAL*
+API_KEYS_LOCATION_MAP*
+
+# --- локальные логи реорганизации ---
+_ЛОГ_*
+_ОТКАТ*

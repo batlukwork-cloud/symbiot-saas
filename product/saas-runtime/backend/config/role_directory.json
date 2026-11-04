@@ -1,0 +1,1022 @@
+{
+  "version": "role-directory-v0.2-full-permissions",
+  "source": "Obsidian role registry + Symbiot Runtime permission groups",
+  "obsidian_registry": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\00_КАРТЫ_И_РЕЕСТРЫ\\РЕЕСТР_AI_АССИСТЕНТОВ_И_РОЛЕЙ.md",
+  "permission_model": {
+    "version": "role-permissions-v0.1",
+    "default_deny": true,
+    "permission_groups": {
+      "process.view": "Can see process catalog and own permitted work context.",
+      "process.execute": "Can execute runtime process steps inside tenant scope.",
+      "evidence.view": "Can view internal evidence status and audit state.",
+      "evidence.package": "Can download internal evidence packages; external export remains blocked.",
+      "policy.manage": "Can change runtime access policies.",
+      "role.admin": "Can administer runtime role directory mappings.",
+      "quality.accept": "Can accept/reject quality evidence.",
+      "risk.review": "Can review risk gates and stop conditions.",
+      "security.review": "Can review ASVS/security controls.",
+      "ai.governance": "Can review NIST AI RMF/provider governance evidence.",
+      "rag.admin": "Can manage RAG indexing/eval/memory controls.",
+      "llm.admin": "Can manage LLM provider controls.",
+      "data.admin": "Can manage data model/vector storage controls.",
+      "deployment.manage": "Can manage runtime environment/release operations.",
+      "configuration.manage": "Can manage configuration and release evidence.",
+      "implementation.write": "Can implement code or automation changes.",
+      "task.dispatch": "Can route tasks to roles/workgroups.",
+      "test.execute": "Can execute tests and QA checks.",
+      "project.review": "Can review project/domain artifacts."
+    }
+  },
+  "roles": [
+    {
+      "runtime_role": "hr",
+      "display_name": "HR",
+      "symbiot_role_ref": "[[РОЛЬ_AI_HR]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\08_АДМИНИСТРАТИВНЫЙ_БЛОК\\РОЛЬ_AI_HR.md",
+      "department": "administration",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "imperator-schastya",
+      "display_name": "Император счастья",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Император_счастья]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\08_АДМИНИСТРАТИВНЫЙ_БЛОК\\РОЛЬ_AI_Император_счастья.md",
+      "department": "administration",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "startup-assistent",
+      "display_name": "StartUp ассистент",
+      "symbiot_role_ref": "[[РОЛЬ_AI_StartUp_ассистент]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\08_АДМИНИСТРАТИВНЫЙ_БЛОК\\РОЛЬ_AI_StartUp_ассистент.md",
+      "department": "administration",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ai-architect",
+      "display_name": "AI архитектор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_AI_архитектор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_AI_архитектор.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "ai.governance",
+        "audit.review",
+        "evidence.package",
+        "evidence.view",
+        "llm.admin",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ai-governance-lead",
+      "display_name": "AI Governance Lead",
+      "symbiot_role_ref": "[[РОЛЬ_AI_AI_Governance_Lead]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_AI_Governance_Lead.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "ai.governance",
+        "audit.review",
+        "evidence.package",
+        "evidence.view",
+        "llm.admin",
+        "process.execute",
+        "process.view",
+        "risk.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "appsec",
+      "display_name": "AppSec Security Architect",
+      "symbiot_role_ref": "[[РОЛЬ_AI_AppSec_Security_Architect]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_AppSec_Security_Architect.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "deployment.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "security.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "backend-developer",
+      "display_name": "Backend разработчик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Backend_разработчик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Backend_разработчик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "implementation.write",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "data-architect",
+      "display_name": "Архитектор данных",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Архитектор_данных]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Архитектор_данных.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "ai.governance",
+        "audit.review",
+        "data.admin",
+        "evidence.package",
+        "evidence.view",
+        "llm.admin",
+        "process.execute",
+        "process.view",
+        "rag.admin"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "devops-runtime-engineer",
+      "display_name": "DevOps runtime инженер",
+      "symbiot_role_ref": "[[РОЛЬ_AI_DevOps_runtime_инженер]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_DevOps_runtime_инженер.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "deployment.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "security.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "digital-framework-it-director",
+      "display_name": "IT директор цифрового каркаса",
+      "symbiot_role_ref": "[[РОЛЬ_AI_IT_директор_цифрового_каркаса]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_IT_директор_цифрового_каркаса.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "deployment.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "security.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "frontend-developer",
+      "display_name": "Frontend разработчик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Frontend_разработчик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Frontend_разработчик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "implementation.write",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "inzhener-avtomatizatsiy",
+      "display_name": "Инженер автоматизаций",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Инженер_автоматизаций]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Инженер_автоматизаций.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "implementation.write",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "it-director",
+      "display_name": "IT директор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_IT_директор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_IT_директор.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "deployment.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "security.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "mladshiy-razrabotchik",
+      "display_name": "Младший разработчик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Младший_разработчик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Младший_разработчик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "priemschik-tehnologii",
+      "display_name": "Приемщик технологии",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Приемщик_технологии]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Приемщик_технологии.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "test.execute"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "qa-lead",
+      "display_name": "QA Lead",
+      "symbiot_role_ref": "[[РОЛЬ_AI_QA_Lead]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_QA_Lead.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "test.execute"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "qa-testirovschik",
+      "display_name": "QA тестировщик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_QA_тестировщик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_QA_тестировщик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "test.execute"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "rag-engineer",
+      "display_name": "RAG инженер",
+      "symbiot_role_ref": "[[РОЛЬ_AI_RAG_инженер]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_RAG_инженер.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "data.admin",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "rag.admin"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "reliz-menedzher",
+      "display_name": "Релиз менеджер",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Релиз_менеджер]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Релиз_менеджер.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "configuration.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "requirements-engineer",
+      "display_name": "Системный аналитик ТЗ",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Системный_аналитик_ТЗ]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Системный_аналитик_ТЗ.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "tehnicheskiy-pisatel",
+      "display_name": "Технический писатель",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Технический_писатель]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Технический_писатель.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "tehnologicheskiy-arhitektor",
+      "display_name": "Технологический архитектор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Технологический_архитектор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Технологический_архитектор.md",
+      "department": "engineering",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "deployment.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "security.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ux-ui-designer",
+      "display_name": "UX UI проектировщик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_UX_UI_проектировщик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_UX_UI_проектировщик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "veduschiy-razrabotchik",
+      "display_name": "Ведущий разработчик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Ведущий_разработчик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\07_IT_БЛОК\\РОЛЬ_AI_Ведущий_разработчик.md",
+      "department": "engineering",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "implementation.write",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "bankovskiy-analitik",
+      "display_name": "Банковский аналитик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Банковский_аналитик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\04_ФИНАНСОВЫЙ_БЛОК\\РОЛЬ_AI_Банковский_аналитик.md",
+      "department": "finance",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "finansovyy-analitik",
+      "display_name": "Финансовый аналитик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Финансовый_аналитик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\04_ФИНАНСОВЫЙ_БЛОК\\РОЛЬ_AI_Финансовый_аналитик.md",
+      "department": "finance",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "finansovyy-direktor",
+      "display_name": "Финансовый директор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Финансовый_директор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\04_ФИНАНСОВЫЙ_БЛОК\\РОЛЬ_AI_Финансовый_директор.md",
+      "department": "finance",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "biznes-konsultant-development",
+      "display_name": "Бизнес консультант девелопмент",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Бизнес_консультант_девелопмент]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_Бизнес_консультант_девелопмент.md",
+      "department": "idp-technical",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "biznes-konsultant-goskonsalting",
+      "display_name": "Бизнес консультант госконсалтинг",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Бизнес_консультант_госконсалтинг]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_Бизнес_консультант_госконсалтинг.md",
+      "department": "idp-technical",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "pm-koordinator-idp",
+      "display_name": "PM координатор ИДП",
+      "symbiot_role_ref": "[[РОЛЬ_AI_PM_координатор_ИДП]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_PM_координатор_ИДП.md",
+      "department": "idp-technical",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "proizvodstvennyy-direktor",
+      "display_name": "Производственный директор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Производственный_директор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_Производственный_директор.md",
+      "department": "idp-technical",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "tehnicheskiy-zakazchik",
+      "display_name": "Технический заказчик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Технический_заказчик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_Технический_заказчик.md",
+      "department": "idp-technical",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "urbanist",
+      "display_name": "Урбанист",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Урбанист]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\06_ТЕХНИЧЕСКИЙ_БЛОК_ИДП\\РОЛЬ_AI_Урбанист.md",
+      "department": "idp-technical",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "lichnyy-yurist-dmitriya",
+      "display_name": "Личный юрист Дмитрия",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Личный_юрист_Дмитрия]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\05_ЮРИДИЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Личный_юрист_Дмитрия.md",
+      "department": "legal",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "yurist",
+      "display_name": "Юрист",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Юрист]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\05_ЮРИДИЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Юрист.md",
+      "department": "legal",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "yurist-gradostroitelnyy-potentsial",
+      "display_name": "Юрист градостроительный потенциал",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Юрист_градостроительный_потенциал]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\05_ЮРИДИЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Юрист_градостроительный_потенциал.md",
+      "department": "legal",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "yurist-korporativschik",
+      "display_name": "Юрист корпоративщик",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Юрист_корпоративщик]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\05_ЮРИДИЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Юрист_корпоративщик.md",
+      "department": "legal",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "yurist-po-sdelkam",
+      "display_name": "Юрист по сделкам",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Юрист_по_сделкам]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\05_ЮРИДИЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Юрист_по_сделкам.md",
+      "department": "legal",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "admin",
+      "display_name": "Симбиот архитектор системы",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Симбиот_архитектор_системы]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Симбиот_архитектор_системы.md",
+      "department": "management",
+      "access_level": "admin",
+      "permissions": [
+        "audit.review",
+        "configuration.manage",
+        "evidence.package",
+        "evidence.view",
+        "policy.manage",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "risk.review",
+        "role.admin",
+        "task.dispatch"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "arhivarius-i-reestrator",
+      "display_name": "Архивариус и реестратор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Архивариус_и_реестратор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Архивариус_и_реестратор.md",
+      "department": "management",
+      "access_level": "read",
+      "permissions": [
+        "configuration.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "dispetcher-zadach",
+      "display_name": "Диспетчер задач",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Диспетчер_задач]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Диспетчер_задач.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "kontroler-riskov",
+      "display_name": "Контролер рисков",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Контролер_рисков]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Контролер_рисков.md",
+      "department": "management",
+      "access_level": "manager",
+      "permissions": [
+        "ai.governance",
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "risk.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "metodolog",
+      "display_name": "Методолог",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Методолог]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Методолог.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "observer",
+      "display_name": "Read-only quality observer legacy alias",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Контролер_качества_и_приемки]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Контролер_качества_и_приемки.md",
+      "department": "management",
+      "access_level": "read",
+      "permissions": [
+        "evidence.view",
+        "process.view",
+        "quality.accept"
+      ],
+      "status": "active",
+      "alias_of": "quality-controller"
+    },
+    {
+      "runtime_role": "quality-controller",
+      "display_name": "Контролер качества и приемки",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Контролер_качества_и_приемки]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Контролер_качества_и_приемки.md",
+      "department": "management",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "test.execute"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "runtime-operator",
+      "display_name": "Диспетчер задач Симбиота",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Диспетчер_задач_Симбиота]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Диспетчер_задач_Симбиота.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.package",
+        "evidence.view",
+        "policy.manage",
+        "process.execute",
+        "process.view",
+        "quality.accept",
+        "risk.review",
+        "role.admin",
+        "task.dispatch"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "sekretar-los",
+      "display_name": "Секретарь ЛОС",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Секретарь_ЛОС]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Секретарь_ЛОС.md",
+      "department": "management",
+      "access_level": "read",
+      "permissions": [
+        "evidence.view",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "sekretar-simbiota",
+      "display_name": "Секретарь Симбиота",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Секретарь_Симбиота]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Секретарь_Симбиота.md",
+      "department": "management",
+      "access_level": "read",
+      "permissions": [
+        "evidence.view",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "simbiot-arhitektor-uchitel",
+      "display_name": "Симбиот архитектор учитель",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Симбиот_архитектор_учитель]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Симбиот_архитектор_учитель.md",
+      "department": "management",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "sinhronizator-roley",
+      "display_name": "Синхронизатор ролей",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Синхронизатор_ролей]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Синхронизатор_ролей.md",
+      "department": "management",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "configuration.manage",
+        "evidence.package",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "uchitel-simbiota",
+      "display_name": "Учитель Симбиота",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Учитель_Симбиота]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_Учитель_Симбиота.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ukr",
+      "display_name": "УКР",
+      "symbiot_role_ref": "[[РОЛЬ_AI_УКР]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_УКР.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ukr-obrabotchik-kontenta",
+      "display_name": "УКР обработчик контента",
+      "symbiot_role_ref": "[[РОЛЬ_AI_УКР_обработчик_контента]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_УКР_обработчик_контента.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "ukr-raspoznavanie-i-ochistka",
+      "display_name": "УКР распознавание и очистка",
+      "symbiot_role_ref": "[[РОЛЬ_AI_УКР_распознавание_и_очистка]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\01_СИМБИОТ_И_ПОМОЩНИКИ\\РОЛЬ_AI_УКР_распознавание_и_очистка.md",
+      "department": "management",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "analitik-rynka",
+      "display_name": "Аналитик рынка",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Аналитик_рынка]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Аналитик_рынка.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "commercial-director",
+      "display_name": "Коммерческий директор",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Коммерческий_директор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Коммерческий_директор.md",
+      "department": "sales",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "direktor-po-marketingu",
+      "display_name": "Директор по маркетингу",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Директор_по_маркетингу]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Директор_по_маркетингу.md",
+      "department": "sales",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "direktor-po-prodazham",
+      "display_name": "Директор по продажам",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Директор_по_продажам]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Директор_по_продажам.md",
+      "department": "sales",
+      "access_level": "manager",
+      "permissions": [
+        "audit.review",
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "dizayner",
+      "display_name": "Дизайнер",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Дизайнер]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Дизайнер.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "dizayner-produkta-i-interfeysov",
+      "display_name": "Дизайнер продукта и интерфейсов",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Дизайнер_продукта_и_интерфейсов]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Дизайнер_продукта_и_интерфейсов.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "dizayner-torgovogo-marketinga",
+      "display_name": "Дизайнер торгового маркетинга",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Дизайнер_торгового_маркетинга]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Дизайнер_торгового_маркетинга.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "rop",
+      "display_name": "РОП",
+      "symbiot_role_ref": "[[РОЛЬ_AI_РОП]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_РОП.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    },
+    {
+      "runtime_role": "sales-manager",
+      "display_name": "Commercial process executor legacy alias",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Коммерческий_директор]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Коммерческий_директор.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view",
+        "project.review"
+      ],
+      "status": "active",
+      "alias_of": "commercial-director"
+    },
+    {
+      "runtime_role": "startap-menedzher",
+      "display_name": "Стартап менеджер",
+      "symbiot_role_ref": "[[РОЛЬ_AI_Стартап_менеджер]]",
+      "obsidian_path": "D:\\СИСТЕМА\\01.Базы данных\\01_База № 3 (MAC)\\15.03_База № 3 (MAC)\\01_Симбиот_что_и_зачем\\03_Уровень_3_Компания_проектов\\03_КОММЕРЧЕСКИЙ_БЛОК\\РОЛЬ_AI_Стартап_менеджер.md",
+      "department": "sales",
+      "access_level": "standard",
+      "permissions": [
+        "evidence.view",
+        "process.execute",
+        "process.view"
+      ],
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "evidence_id": "EV-125",
+  "status": "PASS",
+  "proof": "All Sources screen inputs complete trigger -> decision card -> Human Gate -> mission contract draft -> approved local sandbox mission",
+  "tested_at": "2026-08-02",
+  "url_tested": "http://127.0.0.1:60074/",
+  "full_chain_sources": [
+    "telegram",
+    "email",
+    "whatsapp",
+    "webhook",
+    "folder",
+    "bitrix24"
+  ],
+  "artifact_count_each": 6,
+  "screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_all_sources_screen_2026-08-02.png",
+  "checks": [
+    "Sources view opens in browser",
+    "All source status records are returned by /api/sources/status",
+    "Telegram-compatible local trigger completes full chain",
+    "Email local spool completes full chain",
+    "WhatsApp Cloud API-compatible local update completes full chain",
+    "Generic local webhook completes full chain",
+    "Folder spool completes full chain",
+    "Bitrix24-compatible local task event completes full chain",
+    "Every chain reaches decision card, Human Gate acceptance, mission contract draft and approved local sandbox mission"
+  ],
+  "limits": {
+    "telegram_real_token_required_for_get_me": true,
+    "whatsapp_mode": "local_compatible_endpoint",
+    "webhook_mode": "local_endpoint",
+    "folder_mode": "local_spool",
+    "bitrix24_mode": "local_compatible_endpoint",
+    "secrets_written_to_files": false,
+    "production_touched": false,
+    "supabase_live_touched": false,
+    "external_webhook_touched": false,
+    "real_personal_data_used": false,
+    "readiness_changed": false,
+    "d1_tst_001_closed": false
+  }
+}

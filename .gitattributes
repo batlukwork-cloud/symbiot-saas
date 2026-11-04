@@ -1,0 +1,24 @@
+# Единые правила концов строк и бинарных файлов
+* text=auto eol=crlf
+
+# явно бинарные
+*.xlsx  binary
+*.xlsm  binary
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.exe   binary
+*.zip   binary
+
+# документация и код — без преобразований при diff
+*.md    text eol=crlf
+*.py    text eol=crlf
+*.js    text eol=crlf
+*.ts    text eol=crlf
+*.tsx   text eol=crlf
+*.json  text eol=crlf
+LICENSE text eol=crlf

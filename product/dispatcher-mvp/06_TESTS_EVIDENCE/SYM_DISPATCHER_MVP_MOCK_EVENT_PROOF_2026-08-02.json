@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "proof": "mock dispatch_event creates decision card and blocks runtime before Human Gate",
+  "date": "2026-08-02",
+  "project_code": "SYM-SAAS",
+  "scope": "source-level local mock only",
+  "command": "node 06_TESTS_EVIDENCE/proof_mock_dispatch_event.js",
+  "dispatch_event_id": "dispatch_evt_3f18c4eeea2fc88e",
+  "decision_card_id": "decision_card_335629d29d4c89ed",
+  "runtime_started": false,
+  "blocked_reason": "HUMAN_GATE_REQUIRED",
+  "obsidian_writes": 0,
+  "model_calls": 0,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false,
+  "production_touched": false,
+  "secrets_touched": false
+}

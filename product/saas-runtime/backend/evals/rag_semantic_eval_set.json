@@ -1,0 +1,98 @@
+[
+  {
+    "id": "eval-ocr-marker",
+    "category": "ocr_rag",
+    "query": "SYMBIOT ENG0009 OCR RAG READY",
+    "expected_document_id": "doc-demo-003",
+    "min_score": 0.75,
+    "requirement": "Post-OCR source marker must be retrievable from live pgvector."
+  },
+  {
+    "id": "eval-ocr-worker",
+    "category": "ocr_rag",
+    "query": "OCR worker indexes extracted text into RAG",
+    "expected_document_id": "doc-demo-003",
+    "min_score": 0.65,
+    "requirement": "OCR worker output must be searchable after indexing."
+  },
+  {
+    "id": "eval-ocr-unique-marker",
+    "category": "ocr_rag",
+    "query": "unique marker OCR RAG READY",
+    "expected_document_id": "doc-demo-003",
+    "min_score": 0.65,
+    "requirement": "Unique OCR marker must route to OCR-derived document."
+  },
+  {
+    "id": "eval-quality-standards",
+    "category": "standards",
+    "query": "ASVS NIST AI RMF quality gate evidence",
+    "expected_document_id": "doc-demo-002",
+    "min_score": 0.60,
+    "requirement": "Standards query must retrieve quality evidence source."
+  },
+  {
+    "id": "eval-iso-release",
+    "category": "standards",
+    "query": "ISO 12207 release evidence",
+    "expected_document_id": "doc-demo-002",
+    "min_score": 0.60,
+    "requirement": "Lifecycle evidence query must retrieve ISO release source."
+  },
+  {
+    "id": "eval-provider-fallback",
+    "category": "ai_governance",
+    "query": "provider fallback NIST AI RMF",
+    "expected_document_id": "doc-demo-002",
+    "min_score": 0.60,
+    "requirement": "Provider governance query must retrieve NIST/provider source."
+  },
+  {
+    "id": "eval-persistent-storage",
+    "category": "storage",
+    "query": "persistent SQLite storage RAG source coverage",
+    "expected_document_id": "doc-demo-002",
+    "min_score": 0.60,
+    "requirement": "Persistent storage query must retrieve storage evidence source."
+  },
+  {
+    "id": "eval-audit-runtime",
+    "category": "audit",
+    "query": "runtime artifact audit trail evidence",
+    "expected_document_id": "doc-demo-001",
+    "min_score": 0.60,
+    "requirement": "Audit trail query must retrieve runtime product source."
+  },
+  {
+    "id": "eval-api-screenshot-build",
+    "category": "audit",
+    "query": "API response UI screenshot build hashes audit events",
+    "expected_document_id": "doc-demo-001",
+    "min_score": 0.60,
+    "requirement": "Evidence-pack query must retrieve MVP proof source."
+  },
+  {
+    "id": "eval-runtime-process",
+    "category": "runtime",
+    "query": "Symbiot Runtime process sources LLM artifact audit trail",
+    "expected_document_id": "doc-demo-001",
+    "min_score": 0.60,
+    "requirement": "Runtime architecture query must retrieve product base source."
+  },
+  {
+    "id": "eval-mvp-path",
+    "category": "runtime",
+    "query": "MVP path evidence API response UI screenshot",
+    "expected_document_id": "doc-demo-001",
+    "min_score": 0.60,
+    "requirement": "MVP path query must retrieve MVP proof source."
+  },
+  {
+    "id": "eval-gate-catalog",
+    "category": "quality",
+    "query": "ASVS gate catalog checked together",
+    "expected_document_id": "doc-demo-002",
+    "min_score": 0.60,
+    "requirement": "Gate catalog query must retrieve quality standards source."
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "artifact": "G3 Core Integration Day0 Runtime MVP Scaffold",
+  "created_at": "2026-07-01 06:25:41 +03:00",
+  "root": "<локальный путь>",
+  "status": "G3 opened; Day0 scaffold verified; gate not closed",
+  "smoke_check": "passed: 19 files, 7 API markers",
+  "python_compile": "passed",
+  "file_count": 28,
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 262,
+      "sha256": "848500813F9E59611B2F8DC57C9F2ED2ED26168E77F44B83F1306B01BF3D532B"
+    },
+    {
+      "path": "backend\\app\\__init__.py",
+      "bytes": 36,
+      "sha256": "FDFA9968EF0D313E6947B1C3E0E1285DC42C5681F3F8CC882B32DE213E41DC5E"
+    },
+    {
+      "path": "backend\\app\\main.py",
+      "bytes": 750,
+      "sha256": "F20DFD174ADDCACD607643B1BB790F78427D283DB7E039A927B95CB3EB75F2E6"
+    },
+    {
+      "path": "backend\\app\\routers\\admin.py",
+      "bytes": 377,
+      "sha256": "18173756A3887E788B38CA151FC4FDA77BA6576BACBBD1027D343B49FF2B0D5C"
+    },
+    {
+      "path": "backend\\app\\routers\\artifacts.py",
+      "bytes": 311,
+      "sha256": "61D2C4EBC5D2659533BB78CDBCFF6EB69299E2E448257D611CA01DF86D929A30"
+    },
+    {
+      "path": "backend\\app\\routers\\audit.py",
+      "bytes": 296,
+      "sha256": "6AE684EACB1FCA3E95A8C02E15342ED604C1C63355CC238A3ADFBAF0EDE5C0F9"
+    },
+    {
+      "path": "backend\\app\\routers\\documents.py",
+      "bytes": 300,
+      "sha256": "85EC1C36A244AB4A0D3600EDDF6AC8D26DA4CD949A49651031BB983015F13117"
+    },
+    {
+      "path": "backend\\app\\routers\\health.py",
+      "bytes": 209,
+      "sha256": "4A354E8020DB063A0709C9DEF570BBB894F91B51042C6A8B57450C860CCF69A0"
+    },
+    {
+      "path": "backend\\app\\routers\\processes.py",
+      "bytes": 477,
+      "sha256": "042C95F53E3A1887532F986CFC15900DE36B8D59F01080A818EADAF689B44A73"
+    },
+    {
+      "path": "backend\\app\\routers\\task_runs.py",
+      "bytes": 602,
+      "sha256": "FE2930D55255436A4AEAFE3E1A4634474871B8290615CBAC57B8D430FB072443"
+    },
+    {
+      "path": "backend\\app\\schemas.py",
+      "bytes": 1461,
+      "sha256": "A894D31C353BE9C30D20A8535B2FEAC7AD19C51DE3413DEDB4DD9DB1DB12B19C"
+    },
+    {
+      "path": "backend\\app\\services\\mock_store.py",
+      "bytes": 2346,
+      "sha256": "ACA9F0D623D711E313CA9358D974EEE5A87F2B58B1A29283F3109D27F03F9F57"
+    },
+    {
+      "path": "backend\\Dockerfile",
+      "bytes": 211,
+      "sha256": "16A835AFB74A7CA571166411AAA55A280EAC8147A60FD792D9E516CD7FA5E324"
+    },
+    {
+      "path": "backend\\requirements.txt",
+      "bytes": 86,
+      "sha256": "D32CE8D21276B116E101F3CEDA1E3CD7F8143351A7590D10D43122896FC05FA8"
+    },
+    {
+      "path": "contracts\\data-model.md",
+      "bytes": 807,
+      "sha256": "364AC7E66AAD109E9C5868256370684362457E948A7EEE91145D8D2549DD506B"
+    },
+    {
+      "path": "contracts\\openapi.mvp.yaml",
+      "bytes": 752,
+      "sha256": "3233857AE6123EB54F22BBA7E1FC1FA529A54AB267333A6445818CBA2C37994D"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 701,
+      "sha256": "83051D76A85AF27F4E2559AA7B58086F035CDAC20611C9AA4033EDC7FE9C462E"
+    },
+    {
+      "path": "docs\\G3_CORE_INTEGRATION_DAY0.md",
+      "bytes": 698,
+      "sha256": "F5B3EA7BFA3923141932A8BB49BFE59DDE2A3240DF3B7FA1998A6921FEF2C9E5"
+    },
+    {
+      "path": "frontend\\app\\layout.tsx",
+      "bytes": 299,
+      "sha256": "B6B30F0EDF060FAA257B951D182C037E716F7AEB6F38C05E4A4B47046DEDE843"
+    },
+    {
+      "path": "frontend\\app\\page.tsx",
+      "bytes": 745,
+      "sha256": "98BEB9C8D8C282215E25D48B765D438CCBD6E25BD69E8459974134E3E6D57571"
+    },
+    {
+      "path": "frontend\\app\\styles.css",
+      "bytes": 982,
+      "sha256": "0A4A5F7437D28EB7D8274F4E0FE43D793C20771496DF11BD495771236D920744"
+    },
+    {
+      "path": "frontend\\Dockerfile",
+      "bytes": 138,
+      "sha256": "890D25D81AE7AB993210EA86D745159CAF6BCEDCF594B12204133D5190CCA92E"
+    },
+    {
+      "path": "frontend\\next-env.d.ts",
+      "bytes": 82,
+      "sha256": "04F71D342A4A5BFC120EBC1FD1ECA5B18716C7929A16BCB2D29ED9BB9E248236"
+    },
+    {
+      "path": "frontend\\next.config.mjs",
+      "bytes": 76,
+      "sha256": "FD1EF6713E0DB21B7FA7408C45FDFF2B614387F011D2F36F098AC5E161A3C8A8"
+    },
+    {
+      "path": "frontend\\package.json",
+      "bytes": 421,
+      "sha256": "535E6360B1A6ACDB4023CAB7E94250238CC33322826EA80E700F1EFF7644A156"
+    },
+    {
+      "path": "frontend\\tsconfig.json",
+      "bytes": 471,
+      "sha256": "D1097015C10D275C599BBD7E5659779FE6B62372EB75E6F9C9260819B31F8420"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1275,
+      "sha256": "3A134A08334B0DFFFC2E5BE21804FAF02822C0B238EB31E62378EAAA9FB5077F"
+    },
+    {
+      "path": "scripts\\g3_smoke_check.py",
+      "bytes": 1546,
+      "sha256": "F25019FE248BB2FB6EED81316E7BDA04F3BBBDB24B3F341EB9682556CEE36B4E"
+    }
+  ]
+}

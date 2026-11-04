@@ -1,0 +1,385 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --line: #d7dde4;
+  --text: #18212f;
+  --muted: #607086;
+  --blue: #1e5aa7;
+  --green: #147a54;
+  --amber: #9a5b00;
+  --red: #9b2d30;
+  --shadow: 0 12px 30px rgba(24, 33, 47, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topnav button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.topnav button.selected {
+  color: #ffffff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.status-strip,
+.action-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-pill.neutral {
+  color: var(--blue);
+  background: #eef5ff;
+  border-color: #c7d9f2;
+}
+
+.status-pill.stop {
+  color: var(--red);
+  background: #fff1f1;
+  border-color: #f0c6c8;
+}
+
+.status-pill.wait {
+  color: var(--amber);
+  background: #fff7e8;
+  border-color: #eed39c;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(360px, 1fr);
+  gap: 16px;
+  padding: 20px 32px 24px;
+}
+
+.sources-workspace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 16px;
+  padding: 20px 32px 24px;
+}
+
+.inbox-pane,
+.decision-pane,
+.contract-pane {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.inbox-pane {
+  min-height: 420px;
+  padding: 16px;
+}
+
+.decision-pane,
+.contract-pane {
+  padding: 20px;
+}
+
+.contract-pane {
+  grid-column: 2;
+}
+
+.pane-title,
+.decision-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.inbox-item {
+  display: grid;
+  width: 100%;
+  min-height: 132px;
+  padding: 14px;
+  gap: 6px;
+  text-align: left;
+  color: var(--text);
+  background: #f9fbfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.adapter-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.adapter-actions button {
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--blue);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.inbox-item.selected {
+  border-color: var(--blue);
+  box-shadow: inset 3px 0 0 var(--blue);
+}
+
+.channel,
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.summary {
+  color: #2a3647;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.decision-grid.compact {
+  margin-bottom: 0;
+}
+
+.decision-grid div {
+  min-height: 78px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+dd {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.action-row button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.action-row button:hover {
+  border-color: var(--blue);
+}
+
+.action-row .primary-action {
+  gap: 8px;
+  min-width: 212px;
+  color: #ffffff;
+  background: var(--green);
+  border-color: var(--green);
+  font-weight: 800;
+}
+
+.action-row .primary-action:disabled {
+  background: #7a8a9a;
+  border-color: #7a8a9a;
+  cursor: default;
+}
+
+.contract-actions {
+  margin-top: 16px;
+}
+
+.result-pane {
+  border-color: #c7d9f2;
+}
+
+.source-card {
+  min-height: 300px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.field-label {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.source-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  background: #fbfcfe;
+  font: inherit;
+}
+
+.source-actions {
+  margin-top: 14px;
+}
+
+.source-note {
+  min-height: 42px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.footer-state {
+  min-height: 48px;
+  padding: 14px 32px;
+  color: var(--text);
+  background: #e9eef4;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+    padding: 14px 14px 24px;
+  }
+
+  .sources-workspace {
+    grid-template-columns: 1fr;
+    padding: 14px 14px 24px;
+  }
+
+  .contract-pane {
+    grid-column: auto;
+  }
+
+  .decision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-row {
+    align-items: stretch;
+  }
+
+  .action-row .primary-action {
+    width: 100%;
+  }
+}

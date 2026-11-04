@@ -1,0 +1,3263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- SEO meta (added 01.05.2026) -->
+    
+    
+    <meta name="description" content="Добавление шагов самокритики и последующего исправления в промпт-цепочку заставляет LLM генерировать более честные, точные и полезные ответы по сравнению с прямым запросом.">
+    <meta name="keywords" content="промпт-инжиниринг, промптинг, AI исследования, LLM, , ">
+    <link rel="canonical" href="https://novasapiens.ru/prompt/2506.16064">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через">
+    <meta property="og:description" content="Добавление шагов самокритики и последующего исправления в промпт-цепочку заставляет LLM генерировать более честные, точные и полезные ответы по сравнению с прямым запросом.">
+    <meta property="og:url" content="https://novasapiens.ru/prompt/2506.16064">
+    <meta property="og:site_name" content="Nova Sapiens — Research">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через">
+    <meta name="twitter:description" content="Добавление шагов самокритики и последующего исправления в промпт-цепочку заставляет LLM генерировать более честные, точные и полезные ответы по сравнению с прямым запросом.">
+    <meta property="article:published_time" content="1 июня 2025 г.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "\u0421\u0430\u043c\u043e\u043a\u0440\u0438\u0442\u0438\u043a\u0430 \u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u043c\u043e\u0435 \u041b\u044e\u0431\u043e\u043f\u044b\u0442\u0441\u0442\u0432\u043e \u0423\u0442\u043e\u0447\u043d\u0435\u043d\u0438\u0435 \u0423\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435 \u0427\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u0438 \u0438 \u041f\u043e\u043b\u0435\u0437\u043d\u043e\u0441\u0442\u0438 \u0432 \u0411\u043e\u043b\u044c\u0448\u0438\u0445 \u042f\u0437\u044b\u043a\u043e\u0432\u044b\u0445 \u041c\u043e\u0434\u0435\u043b\u044f\u0445 \u0447\u0435\u0440\u0435\u0437",
+        "alternativeHeadline": "2506.16064.Self Critique Guided Curiosity Refinement Enhancing Honesty and Helpfulness in Large Language Models via",
+        "description": "\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0448\u0430\u0433\u043e\u0432 \u0441\u0430\u043c\u043e\u043a\u0440\u0438\u0442\u0438\u043a\u0438 \u0438 \u043f\u043e\u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u0438\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0432 \u043f\u0440\u043e\u043c\u043f\u0442-\u0446\u0435\u043f\u043e\u0447\u043a\u0443 \u0437\u0430\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 LLM \u0433\u0435\u043d\u0435\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0431\u043e\u043b\u0435\u0435 \u0447\u0435\u0441\u0442\u043d\u044b\u0435, \u0442\u043e\u0447\u043d\u044b\u0435 \u0438 \u043f\u043e\u043b\u0435\u0437\u043d\u044b\u0435 \u043e\u0442\u0432\u0435\u0442\u044b \u043f\u043e \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u044e \u0441 \u043f\u0440\u044f\u043c\u044b\u043c \u0437\u0430\u043f\u0440\u043e\u0441\u043e\u043c.",
+        "url": "https://novasapiens.ru/prompt/2506.16064",
+        "identifier": "arXiv:2506.16064",
+        "isAccessibleForFree": false,
+        "datePublished": "1 июня 2025 г.",
+        "inLanguage": "ru",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Nova Sapiens",
+            "url": "https://novasapiens.ru"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Nova Sapiens",
+            "url": "https://novasapiens.ru"
+        }
+    }
+    </script>
+
+    <title>Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через — Nova Sapiens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/nova_research.css?v=20260308_nav_v40">
+    <style>
+        /* Missing CSS Variable */
+        :root {
+            --sidebar-border-hover: #d4d4d8;
+        }
+        [data-theme="dark"] {
+            --sidebar-border-hover: #3f3f46;
+        }
+
+        /* Article List Transition */
+        .article-list {
+            transition: opacity 0.15s ease;
+        }
+
+        /* Drawer Overlay - must be UNDER the drawer */
+        .drawer-overlay {
+            position: fixed;
+            top: 52px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998 !important;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s 0.3s;
+        }
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+
+        /* Filters Drawer */
+        .filters-drawer {
+            position: fixed;
+            top: 52px;
+            left: 0;
+            width: 400px;
+            height: calc(100vh - 52px);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+            border-right: 1px solid #cbd5e1;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .filters-drawer.active {
+            transform: translateX(0);
+        }
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e2e8f0;
+            background: #ffffff;
+        }
+        .drawer-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+        .drawer-close {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #475569;
+            cursor: pointer;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .drawer-close:hover {
+            background: #e2e8f0;
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .drawer-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+        }
+        .drawer-footer {
+            display: flex;
+            gap: 12px;
+            padding: 20px 24px;
+            border-top: 1px solid #e2e8f0;
+            background: #ffffff;
+        }
+
+        /* Filter Sections */
+        .filter-section {
+            margin-bottom: 32px;
+        }
+        .filter-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+        .filter-values {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Rating Slider */
+        .rating-slider-container { margin-bottom: 16px; }
+        .rating-distribution { margin-bottom: 20px; }
+        .distribution-bar {
+            height: 8px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #94a3b8 0%, #94a3b8 8%, #cbd5e1 12%, #9ca3af 18%, #fbbf24 28%, #f97316 50%, #059669 75%, #047857 100%);
+            margin-bottom: 16px;
+            position: relative;
+            cursor: pointer;
+        }
+        .selected-range {
+            position: absolute;
+            top: 0;
+            height: 8px;
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%);
+            border-radius: 8px;
+            pointer-events: none;
+            backdrop-filter: brightness(0.9);
+        }
+        .rating-handle {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            cursor: grab;
+            z-index: 10;
+            transition: border-width 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        .rating-handle:hover {
+            border-width: 4px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .rating-handle:active { cursor: grabbing; transform: translate(-50%, -50%) scale(0.95); }
+        .distribution-labels {
+            position: relative;
+            height: 16px;
+            font-size: 10px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        .distribution-labels span { position: absolute; transform: translateX(-50%); }
+        .distribution-labels span:nth-child(1) { left: 0%; transform: translateX(0); }
+        .distribution-labels span:nth-child(2) { left: 8%; }
+        .distribution-labels span:nth-child(3) { left: 23%; }
+        .distribution-labels span:nth-child(4) { left: 39%; }
+        .distribution-labels span:nth-child(5) { left: 75%; }
+        .distribution-labels span:nth-child(6) { left: 100%; transform: translateX(-100%); }
+
+        /* Multi-Select */
+        .multiselect-wrapper { position: relative; }
+        .multiselect-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .multiselect-header:hover { border-color: var(--accent); }
+        .multiselect-header.active { border-color: var(--accent); }
+        .multiselect-placeholder { font-size: 13px; color: #475569; }
+        .multiselect-arrow { flex-shrink: 0; transition: transform 0.2s ease; color: #64748b; }
+        .multiselect-header.active .multiselect-arrow { transform: rotate(180deg); }
+        .multiselect-dropdown {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .multiselect-dropdown.active {
+            max-height: 300px;
+            opacity: 1;
+            visibility: visible;
+            overflow-y: auto;
+        }
+        .multiselect-search { padding: 12px; border-bottom: 1px solid #e2e8f0; }
+        .multiselect-search-input {
+            width: 100%;
+            padding: 8px 12px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            color: #1e293b;
+            font-size: 13px;
+        }
+        .multiselect-search-input:focus { outline: none; border-color: var(--accent); }
+        .multiselect-options { padding: 8px; overflow-y: auto; max-height: 250px; flex: 1; }
+        .multiselect-apply-btn {
+            position: sticky;
+            bottom: 0;
+            padding: 12px;
+            border-top: 1px solid #e2e8f0;
+            background: #ffffff;
+            flex-shrink: 0;
+        }
+        .multiselect-apply-btn button {
+            width: 100%;
+            padding: 8px 16px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .multiselect-apply-btn button:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); }
+        .multiselect-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+        .multiselect-option:hover { background: #f8fafc; }
+        .multiselect-option input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: var(--accent); }
+        .multiselect-option span { font-size: 13px; color: #475569; }
+
+        /* Drawer Buttons */
+        .btn {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-reset { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+        .btn-reset:hover { background: #e2e8f0; }
+        .btn-apply { background: var(--accent); color: white; border: none; }
+        .btn-apply:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        @media (max-width: 768px) {
+            .filters-drawer { width: 100%; max-width: 400px; }
+        }
+
+        /* Loading & Empty States */
+        .loading-articles {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .loading-articles .loading-spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border-subtle);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .no-articles {
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Filter Count Badge */
+        .filter-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 6px;
+            background: var(--accent);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 10px;
+            margin-left: 6px;
+        }
+        .filters-btn-full.active .filter-count {
+            background: white;
+            color: var(--accent);
+        }
+
+        /* New Sidebar Elements for Evaluation Data */
+        /* evaluation-summary styles inherited from nova_research.css */
+        .sidebar-insight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .sidebar-card-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .sidebar-insight-box > :not(.sidebar-card-label) {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+        .sidebar-principles-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-list li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+        .sidebar-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .sidebar-list li:last-child {
+            margin-bottom: 0;
+        }
+        .limitation-text {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text-muted);
+            padding: 10px 12px;
+            background: rgba(245, 158, 11, 0.08);
+            border-radius: 6px;
+        }
+        .sidebar-section-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .thinking-text {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 12px;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Configure marked.js for better markdown parsing
+        if (typeof marked !== 'undefined') {
+            marked.setOptions({
+                breaks: true,
+                gfm: true,
+                headerIds: true,
+                mangle: false
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105879385', 'ym');
+
+    ym(105879385, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105879385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body class="detail-page">
+    <!-- Header -->
+        <!-- Header (unified template — included on all pages) -->
+    <header class="header">
+        <!-- Mobile burger menu -->
+        <button class="burger-menu" id="burgerMenu" aria-label="Меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <div class="header-left">
+            <a href="/prompt" class="logo">
+                <span class="logo-mark"><img src="https://novasapiens.ru/static/design/novalogo.jpg" alt="Nova Sapiens Logo"></span>
+                <span class="logo-text">Nova Sapiens</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-section">Research</span>
+            </a>
+            <div class="header-stats">
+                <span><span class="stat-value">3,583</span> papers</span>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="header-nav">
+            <a href="/research-finder" class="nav-icon-link nav-search-link" title="AI-поиск по исследованиям">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M19 2v3M20.5 3.5h-3M5 19v3M6.5 20.5h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span class="nav-text">AI-поиск</span>
+                <span class="nav-ai-badge">AI</span>
+            </a>
+            <a href="/prompt-boost" class="nav-icon-link" title="Бустер промптов">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8 19 13M15 9h.01M17.8 6.2 19 5M3 21l9-9M12.2 6.2 11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-text">Бустер</span>
+            </a>
+            <a href="/favorites" class="nav-icon-link" title="Избранное">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-text">Избранное</span>
+            </a>
+            <a href="/generations" class="nav-icon-link" title="История генераций">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-text">Генерации</span>
+            </a>
+        </nav>
+
+        <div class="header-right">
+            
+            <!-- Login Button (not logged in) -->
+            <button class="btn-header" onclick="window.location.href='/auth/login?redirect_uri=' + encodeURIComponent(window.location.pathname)">Войти</button>
+            
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="mobile-drawer-content">
+                <div class="mobile-drawer-header">
+                    <h3>Меню</h3>
+                    <button class="mobile-drawer-close" id="drawerClose">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="/prompt" class="mobile-nav-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Каталог</span>
+                    </a>
+                    <a href="/research-finder" class="mobile-nav-item mobile-search-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M19 2v3M20.5 3.5h-3M5 19v3M6.5 20.5h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span>AI-поиск</span>
+                        <span class="nav-ai-badge">AI</span>
+                    </a>
+                    <a href="/prompt-boost" class="mobile-nav-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8 19 13M15 9h.01M17.8 6.2 19 5M3 21l9-9M12.2 6.2 11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Бустер</span>
+                    </a>
+                    <a href="/favorites" class="mobile-nav-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Избранное</span>
+                    </a>
+                    <div class="mobile-nav-divider"></div>
+                    <a href="/generations" class="mobile-nav-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>История генераций</span>
+                    </a>
+                    <div class="mobile-nav-divider"></div>
+                    <div class="mobile-nav-item theme-toggle-mobile">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Темная тема</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="themeToggleMobile">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="mobile-nav-divider"></div>
+                    
+                    <a href="/auth/login" class="mobile-nav-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Войти</span>
+                    </a>
+                    
+                </nav>
+            </div>
+        </div>
+        <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+    </header>
+
+    <!-- App -->
+    <div class="app" id="app">
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="sidebar-content">
+                <div class="sidebar-section sidebar-filters-sort">
+                    <button class="filters-btn-full" onclick="toggleFiltersDrawer()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="20" y2="18"></line>
+                            <circle cx="7" cy="6" r="2" fill="currentColor"></circle>
+                            <circle cx="14" cy="12" r="2" fill="currentColor"></circle>
+                            <circle cx="17" cy="18" r="2" fill="currentColor"></circle>
+                        </svg>
+                        <span>Фильтры</span>
+                    </button>
+
+                    <!-- Sort Group -->
+                    <div class="sort-group">
+                        <div class="sort-buttons">
+                            <button class="sort-btn" data-sort="rating" data-direction="desc" onclick="toggleSort('rating')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                                <span>Рейтинг</span>
+                                <svg class="sort-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button class="sort-btn active" data-sort="date" data-direction="desc" onclick="toggleSort('date')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                <span>Дата</span>
+                                <svg class="sort-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-list">
+                    
+                    <a href="/prompt/2506.22316" class="article-item ">
+                        <span class="article-score score-supertop">97</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Оценка - Оценка - Предвзятость в больших языковых моделях как судье">Оценка - Оценка - Предвзятость в больших языковых моделях как судье</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.05739" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Защита LLM-агента от атак с инъекцией подсказок с помощью полиморфной подсказки">Защита LLM-агента от атак с инъекцией подсказок с помощью полиморфной подсказки</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.02302" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Объясните, а затем обработайте использование грамматического побуждения для улучшения оценок грамматической приемлемости.">Объясните, а затем обработайте использование грамматического побуждения для улучшения оценок грамматической приемлемости.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.06950" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Что делает хороший запрос на естественном языке?">Что делает хороший запрос на естественном языке?</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.08184" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Невозможность забыть: проактивное вмешательство раскрывает пределы рабочей памяти в больших языковых моделях, выходящие за рамки длины контекста.">Невозможность забыть: проактивное вмешательство раскрывает пределы рабочей памяти в больших языковых моделях, выходящие за рамки длины контекста.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.04036" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Угрозы конфиденциальности и безопасности для OpenAI GPTs">Угрозы конфиденциальности и безопасности для OpenAI GPTs</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.12338" class="article-item ">
+                        <span class="article-score score-supertop">96</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Исследование влияния когнитивных искажений в подсказках на результаты работы больших языковых моделей.">Исследование влияния когнитивных искажений в подсказках на результаты работы больших языковых моделей.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.15911" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="От RAG до агентного: валидация ответов исламской медицины с помощью агентов LLM.">От RAG до агентного: валидация ответов исламской медицины с помощью агентов LLM.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.14641" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Переосмысляя - Подсказка цепочки размышлений: нулевой подход может быть сильнее, чем несколько примеров.">Переосмысляя - Подсказка цепочки размышлений: нулевой подход может быть сильнее, чем несколько примеров.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.17163" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="МедПертурб Датасет Что Непосредственные Пертурбации Раскрывают О Человеческом и Клиническом Принятии Решений LLM">МедПертурб Датасет Что Непосредственные Пертурбации Раскрывают О Человеческом и Клиническом Принятии Решений LLM</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.10029" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Оценка эмпирическая защиты и выравнивания ChatGPT и Gemini сравнительный анализ взглядов">Оценка эмпирическая защиты и выравнивания ChatGPT и Gemini сравнительный анализ взглядов</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.03984" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Вокруг света за 24 часа: исследование знаний LLM о времени и месте">Вокруг света за 24 часа: исследование знаний LLM о времени и месте</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.11857" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Поствыравнивание персон для генерации диалогов в многосессионном формате">Поствыравнивание персон для генерации диалогов в многосессионном формате</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.14948" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Структурированное моральное рассуждение в языковых моделях: основа оценки, основанная на ценностях.">Структурированное моральное рассуждение в языковых моделях: основа оценки, основанная на ценностях.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.09956" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="LLMail Внедрение набора данных из реалистичного вызова внедрения подсказок адаптивного типажа">LLMail Внедрение набора данных из реалистичного вызова внедрения подсказок адаптивного типажа</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.14448" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Насколько далеко могут улучшиться языковые модели (LLMs) на основе опыта: измерение способности к обучению во время тестирования в LLM с человеческим сравнением.">Насколько далеко могут улучшиться языковые модели (LLMs) на основе опыта: измерение способности к обучению во время тестирования в LLM с человеческим сравнением.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.14539" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Метод Двойника: Нарушение Ролевой Согласованности в Агенте LLM с помощью Переносимого Атакующего Запроса">Метод Двойника: Нарушение Ролевой Согласованности в Агенте LLM с помощью Переносимого Атакующего Запроса</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.08422" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Преобразование экспертных знаний в масштабируемую онтологию с помощью больших языковых моделей">Преобразование экспертных знаний в масштабируемую онтологию с помощью больших языковых моделей</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.04975" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Оценка китайских больших языковых моделей, управляемых подсказками: влияние назначения персонажа на стереотипы.">Оценка китайских больших языковых моделей, управляемых подсказками: влияние назначения персонажа на стереотипы.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.09992" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Большие языковые модели для обнаружения токсичного языка в языках Балканского региона с низкими ресурсами">Большие языковые модели для обнаружения токсичного языка в языках Балканского региона с низкими ресурсами</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.04907" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Контекст - это не понимание.">Контекст - это не понимание.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.09601" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="ASTAGEN - Эмпирическая оценка автоматизированной генерации таксономии SATD с использованием LLM.">ASTAGEN - Эмпирическая оценка автоматизированной генерации таксономии SATD с использованием LLM.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.08500" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="DRAGged в конфликты Обнаружение и решение конфликтующих источников в поисково дополненных LLM">DRAGged в конфликты Обнаружение и решение конфликтующих источников в поисково дополненных LLM</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.06941" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Иллюзия мышления: понимание сильных и слабых сторон моделей рассуждений через призму">Иллюзия мышления: понимание сильных и слабых сторон моделей рассуждений через призму</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.09443" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="LLM не могут надежно судить: комплексная оценка надежности LLM в роли судьи.">LLM не могут надежно судить: комплексная оценка надежности LLM в роли судьи.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.04572" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Демонстрации атак на целостность в многопользовательских системах">Демонстрации атак на целостность в многопользовательских системах</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.07452" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Когда Стиль Нарушает Безопасность Защита Языковых Моделей От Суперфициального Согласования Стиля">Когда Стиль Нарушает Безопасность Защита Языковых Моделей От Суперфициального Согласования Стиля</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.11068" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Деонтологический ключевое слово биас Влияние модальных выражений на нормативные суждения языковых моделей">Деонтологический ключевое слово биас Влияние модальных выражений на нормативные суждения языковых моделей</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.11812" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="О производительности больших языковых моделей (LLMs) в оценке недвижимости">О производительности больших языковых моделей (LLMs) в оценке недвижимости</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.14092" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Хрупкие предпочтения: углубленное изучение эффектов порядка в больших языковых моделях">Хрупкие предпочтения: углубленное изучение эффектов порядка в больших языковых моделях</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.04245" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Контекстуальная целостность в больших языковых моделях через рассуждение и обучение с подкреплением">Контекстуальная целостность в больших языковых моделях через рассуждение и обучение с подкреплением</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.07736" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="RSafe - Стимулирование проактивного мышления для создания надежных и адаптивных мер безопасности для больших языковых моделей (LLM).">RSafe - Стимулирование проактивного мышления для создания надежных и адаптивных мер безопасности для больших языковых моделей (LLM).</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.03655" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Факты сложнее мнений    Многоязычный сравнительный анализ надежности фактчекинга на основе LLM">Факты сложнее мнений    Многоязычный сравнительный анализ надежности фактчекинга на основе LLM</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.05936" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Динамическая система мышления с тремя режимами для больших языковых моделей">Динамическая система мышления с тремя режимами для больших языковых моделей</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.08235" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Может ли ИИ проверять научные данные: оценка больших языковых моделей для точных научных утверждений и обоснования доказательств.">Может ли ИИ проверять научные данные: оценка больших языковых моделей для точных научных утверждений и обоснования доказательств.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="/prompt/2506.13172" class="article-item ">
+                        <span class="article-score score-supertop">95</span>
+                        <div class="article-info">
+                            <span class="article-title" title="Искусственный интеллект для анализа аннотаций и заключений: выявление необоснованных утверждений и неоднозначных формулировок.">Искусственный интеллект для анализа аннотаций и заключений: выявление необоснованных утверждений и неоднозначных формулировок.</span>
+                            <span class="article-date">01.06.2025</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Sidebar Footer Actions -->
+            <div class="sidebar-footer">
+                <button class="btn-load-more" onclick="loadMore()">
+                    <svg class="load-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7"/>
+                    </svg>
+                    <span class="load-text">Загрузить еще</span>
+                </button>
+                <span class="load-count" id="articleCount">36 статей</span>
+                <div class="footer-divider"></div>
+                <a href="/prompt" class="link-extended-selection">
+                    Расширенный выбор
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <nav class="subnav">
+                <div class="subnav-left">
+                    <div class="tabs">
+                        <button class="tab active" data-tab="summary" onclick="switchTab('summary')">
+                            Саммари
+                        </button>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <button class="action-btn" id="favoriteBtn" title="Добавить в избранное">☆</button>
+            </nav>
+
+            <div class="content">
+                <div class="content-wrapper">
+                    <div class="article-header">
+                        <div class="meta-row">
+                            <span class="meta-tag arxiv">arXiv:2506.16064</span>
+                            <span class="meta-tag score">96</span>
+                            <span class="meta-tag">1 июня 2025 г.</span>
+                            <span class="meta-tag pro">PRO</span>
+                        </div>
+                        <h1 class="article-title-main">Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через</h1>
+
+                        <!-- Key Result Block -->
+                        <div class="key-result-block">
+                            <span class="key-result-label">КЛЮЧЕВАЯ СУТЬ</span>
+                            <div class="key-result-text">
+                                Добавление шагов самокритики и последующего исправления в промпт-цепочку заставляет LLM генерировать более честные, точные и полезные ответы по сравнению с прямым запросом.
+                            </div>
+                        </div>
+
+                        <!-- Adaptation CTA Button -->
+                        <a href="#research-adaptation" class="adaptation-cta-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span>Адаптировать под запрос</span>
+                        </a>
+                    </div>
+
+                    <!-- Summary Tab -->
+                    <div class="tab-content active" id="tab-summary">
+                        <article class="text-article">
+                            
+                                <!-- FREE пользователь + PRO статья: показать только блокировку -->
+                                <!-- PRO блокировка -->
+                                <div class="pro-content-lock">
+                                    <div class="pro-lock-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="pro-lock-title">Контент доступен только для PRO подписчиков</h3>
+                                    <p class="pro-lock-description">Чтобы получить доступ к полному содержанию этого исследования, оформите PRO подписку</p>
+                                    <div class="pro-lock-actions">
+                                        
+                                        <a href="/auth/login?redirect_uri=/prompt/2506.16064" class="pro-lock-btn pro-lock-btn-login">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"></path>
+                                            </svg>
+                                            Войти на сайт
+                                        </a>
+                                        
+
+                                        
+                                        <div class="pro-payment-options">
+                                            <div class="payment-option payment-primary">
+                                                <a href="https://ainovasapiens.getcourse.ru/get-pro-form" target="_blank" rel="noopener noreferrer" class="pro-lock-btn pro-lock-btn-payment">
+                                                    💳 Оплатить через Геткурс
+                                                </a>
+                                                <div class="payment-methods">
+                                                    YandexPay • SberPay • СБП • Карты РФ
+                                                </div>
+                                            </div>
+
+                                            <div class="payment-option payment-alt">
+                                                <a href="https://t.me/tribute/app?startapp=svXZ" target="_blank" rel="noopener noreferrer" class="pro-lock-btn pro-lock-btn-payment-alt">
+                                                    ⚡ Оплатить через Tribute
+                                                </a>
+                                                <div class="payment-methods">
+                                                    Telegram Stars • Моментальный доступ
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="https://novasapiens.ru/getpro-nova/" target="_blank" class="pro-lock-btn pro-lock-btn-secondary">
+                                            Узнать о PRO
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                        </article>
+                    </div>
+
+                    <!-- Digest Tab -->
+                    
+
+                    <!-- Concepts Tab -->
+                    
+
+                    <!-- Simple Tab -->
+                    
+                </div>
+            </div>
+
+            <!-- Research Adaptation Block -->
+            <section class="research-adaptation-section" id="research-adaptation">
+                <h2>
+                    <svg class="section-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                    Работа с исследованием
+                </h2>
+                <div class="adaptation-description">
+                    <p>Адаптируйте исследование под ваши задачи или создайте готовый промпт на основе техник из исследования.</p>
+                </div>
+
+                <!-- Форма -->
+                <div class="adaptation-form-container">
+                    <form id="adaptation-form" class="adaptation-form">
+                        <!-- Выбор модели -->
+                        <div class="model-selection">
+                            <label for="model-select" class="form-label">Выберите модель ИИ:</label>
+                            <select id="model-select" name="model" class="model-select">
+                                <option value="google/gemini-3-flash-preview" selected>Gemini 3 Flash (быстро, экономично)</option>
+                                <option value="anthropic/claude-sonnet-4.6">Claude Sonnet 4.6 (высокое качество, премиум)</option>
+                            </select>
+                        </div>
+
+                        <!-- Поле для запроса -->
+                        <div class="request-input-container">
+                            <label for="user-request" class="form-label">Ваш запрос:</label>
+                            <textarea
+                                id="user-request"
+                                name="user_request"
+                                class="user-request-input"
+                                placeholder="Опишите вашу задачу или для чего нужен промпт..."
+                                rows="4"
+                                maxlength="2000"
+                                required
+                            ></textarea>
+
+                            <!-- Нижняя панель под textarea -->
+                            <div class="textarea-bottom-panel">
+                                <div class="left-controls">
+                                    <button type="button" id="clear-btn" class="nova-adaptation-clear-btn-compact">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 6h18M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        <span>Очистить</span>
+                                    </button>
+                                </div>
+                                <div class="char-counter">
+                                    <span id="char-count">0</span> / 2000
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопки действий -->
+                        <div class="form-actions">
+                            <div class="action-button-group">
+                                <button type="submit" id="adapt-btn" class="adapt-btn">
+                                    <span class="btn-text">
+                                        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                                        </svg>
+                                        Адаптировать исследование
+                                    </span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <svg class="spinner-icon" width="18" height="18" viewBox="0 0 24 24">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4" stroke-dashoffset="10">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+                                            </circle>
+                                        </svg>
+                                        Генерирую
+                                        <span class="timer-display" id="adapt-timer">00:00</span>
+                                    </span>
+                                </button>
+                                <div class="cost-time-indicator">
+                                    <span class="cost-estimate">~0.5-2 N-токенов</span>
+                                    <span class="time-estimate">~10-30с</span>
+                                </div>
+                            </div>
+                            <div class="action-button-group">
+                                <button type="button" id="prompt-btn" class="prompt-btn">
+                                    <span class="btn-text">
+                                        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                                            <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        Сделать промпт
+                                    </span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <svg class="spinner-icon" width="18" height="18" viewBox="0 0 24 24">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4" stroke-dashoffset="10">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+                                            </circle>
+                                        </svg>
+                                        Создаю
+                                        <span class="timer-display" id="prompt-timer">00:00</span>
+                                    </span>
+                                </button>
+                                <div class="cost-time-indicator">
+                                    <span class="cost-estimate">~0.3-1 N-токенов</span>
+                                    <span class="time-estimate">~5-15с</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Результат адаптации -->
+                <div id="adaptation-result" class="adaptation-result" style="display: none;">
+                    <div class="result-header">
+                        <h3 id="adaptation-title">Результат адаптации</h3>
+                        <div class="result-actions">
+                            <button type="button" class="action-btn" onclick="copyAdaptationResult()" title="Копировать текст">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>Копировать</span>
+                            </button>
+                            <button type="button" class="action-btn btn-html" onclick="downloadAdaptationHTML()" title="Скачать HTML">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M9 15l3 3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="12" y1="12" x2="12" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>HTML</span>
+                            </button>
+                            <button type="button" class="action-btn btn-pdf" onclick="downloadAdaptationPDF()" title="Скачать PDF">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M9 15l3 3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="12" y1="12" x2="12" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="adaptation-content" class="result-content"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <!-- Mobile Close Button -->
+            <button class="sidebar-mobile-close" onclick="closeSidebar()" aria-label="Закрыть">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+
+            <div class="sidebar-tabs">
+                <button class="sidebar-tab active" onclick="switchSidebarTab('info')">Инфо</button>
+                
+                <button class="sidebar-tab" onclick="switchSidebarTab('usecases')">Кейсы</button>
+            </div>
+
+            <div class="sidebar-content-tabs">
+                <!-- Info Tab -->
+                <div class="sidebar-tab-panel active" id="sidebar-info">
+                    <!-- Evaluation Block -->
+                    <div class="evaluation-block">
+                        <div class="evaluation-score-badge score-supertop">96</div>
+                        <div class="evaluation-content-wrapper">
+                            <div class="evaluation-verdict">ИСКЛЮЧИТЕЛЬНО</div>
+                            <div class="evaluation-subtitle">Самокритика Управляемое Любопытство Уточнение Улучшение Чест...</div>
+                        </div>
+                    </div>
+
+                    <!-- Evaluation Summary -->
+                    
+
+                    <!-- Two Column Layout Wrapper -->
+                    <div class="sidebar-columns-wrapper">
+                        <!-- Left Column -->
+                        <div class="sidebar-column-left">
+                            
+
+                            
+
+                            
+
+                            <!-- Categories -->
+                            <div class="sidebar-section">
+                                
+                                <div style="margin-bottom: 16px;">
+                                    <div style="font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase;">Возможности</div>
+                                    <div class="category-tags">
+                                        
+                                        <div class="category-tag category-tag-main">
+                                            <span>Улучшение промптов</span>
+                                            <span class="category-tag-pct">95%</span>
+                                        </div>
+                                        
+                                        <div class="category-tag">
+                                            <span>Решение сложных задач</span>
+                                            <span class="category-tag-pct">80%</span>
+                                        </div>
+                                        
+                                        <div class="category-tag">
+                                            <span>Диалоговые агенты и виртуальные ассистенты</span>
+                                            <span class="category-tag-pct">75%</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+
+                                
+                                <div style="margin-bottom: 16px;">
+                                    <div style="font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase;">Область</div>
+                                    <div class="category-tags">
+                                        
+                                        <div class="category-tag category-tag-main">
+                                            <span>Наука и исследования</span>
+                                            <span class="category-tag-pct">90%</span>
+                                        </div>
+                                        
+                                        <div class="category-tag">
+                                            <span>IT и разработка ПО</span>
+                                            <span class="category-tag-pct">85%</span>
+                                        </div>
+                                        
+                                        <div class="category-tag">
+                                            <span>Личная продуктивность</span>
+                                            <span class="category-tag-pct">70%</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+
+                                
+                                <div>
+                                    <div style="font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase;">Паттерн</div>
+                                    <div class="category-tags">
+                                        
+                                        <div class="category-tag category-tag-main">
+                                            <span>Critic &amp; Reviewer</span>
+                                            <span class="category-tag-pct">95%</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="sidebar-column-right">
+                            
+
+                            
+
+                            
+
+                            <div class="sidebar-section source-section">
+                                <div class="sidebar-section-title">ИСТОЧНИК</div>
+                                <div class="source-based">Основано на исследовании</div>
+                                <a href="https://arxiv.org/abs/2506.16064" target="_blank" rel="nofollow noopener" class="source-link">arXiv:2506.16064</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thinking Tab -->
+                
+
+                <!-- Usecases Tab -->
+                <div class="sidebar-tab-panel" id="sidebar-usecases">
+                    
+
+                    
+                    <div class="sidebar-section">
+                        <div class="sidebar-section-title">КОМУ ПОЛЕЗНО</div>
+                        <div class="usecases-list">
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                            <div class="usecase-item">
+                                <div class="usecase-name"></div>
+                                <div class="usecase-description"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Sidebar FAB -->
+    <button class="mobile-sidebar-fab" onclick="openSidebar()" id="mobileSidebarFab">
+        <span class="fab-rating">96</span>
+    </button>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const root = document.documentElement;
+            const currentTheme = root.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            root.setAttribute('data-theme', newTheme);
+
+            const desktopCheckbox = document.getElementById('themeToggleCheckbox');
+            const mobileCheckbox = document.getElementById('themeToggleMobile');
+
+            if (desktopCheckbox) desktopCheckbox.checked = newTheme === 'dark';
+            if (mobileCheckbox) mobileCheckbox.checked = newTheme === 'dark';
+
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const root = document.documentElement;
+            root.setAttribute('data-theme', savedTheme);
+
+            const desktopCheckbox = document.getElementById('themeToggleCheckbox');
+            const mobileCheckbox = document.getElementById('themeToggleMobile');
+
+            if (desktopCheckbox) {
+                desktopCheckbox.checked = savedTheme === 'dark';
+                desktopCheckbox.addEventListener('change', toggleTheme);
+            }
+
+            if (mobileCheckbox) {
+                mobileCheckbox.checked = savedTheme === 'dark';
+                mobileCheckbox.addEventListener('change', toggleTheme);
+            }
+
+            // User Profile Dropdown
+            const userProfileBtn = document.getElementById('userProfileBtn');
+            const userDropdownMenu = document.getElementById('userDropdownMenu');
+
+            if (userProfileBtn && userDropdownMenu) {
+                userProfileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isExpanded = userProfileBtn.getAttribute('aria-expanded') === 'true';
+                    userDropdownMenu.classList.toggle('show', !isExpanded);
+                    userProfileBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!userProfileBtn.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+                        userDropdownMenu.classList.remove('show');
+                        userProfileBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // Mobile Drawer Menu
+            const burgerMenu = document.getElementById('burgerMenu');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+            const drawerClose = document.getElementById('drawerClose');
+            const drawerOverlay = document.getElementById('drawerOverlay');
+
+            function openDrawer() {
+                mobileDrawer.classList.add('open');
+                drawerOverlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                mobileDrawer.classList.remove('open');
+                drawerOverlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+
+            if (burgerMenu) burgerMenu.addEventListener('click', openDrawer);
+            if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+            if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+            // Character counter
+            const userRequest = document.getElementById('user-request');
+            const charCount = document.getElementById('char-count');
+            if (userRequest && charCount) {
+                userRequest.addEventListener('input', function() {
+                    charCount.textContent = this.value.length;
+                });
+            }
+
+            // Clear button
+            const clearBtn = document.getElementById('clear-btn');
+            if (clearBtn && userRequest) {
+                clearBtn.addEventListener('click', function() {
+                    userRequest.value = '';
+                    charCount.textContent = '0';
+                });
+            }
+
+            // ===== FAVORITES FUNCTIONALITY (FIX 17.01.2026) =====
+            const favoriteBtn = document.getElementById('favoriteBtn');
+            if (favoriteBtn) {
+                favoriteBtn.addEventListener('click', toggleFavorite);
+                // Check initial favorite status
+                checkFavoriteStatus();
+            }
+        });
+
+        // ===== FAVORITES FUNCTIONS (FIX 17.01.2026) =====
+        async function toggleFavorite() {
+            const btn = document.getElementById('favoriteBtn');
+            const researchId = '2506.16064';
+
+            if (!btn || !researchId) return;
+
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = '⏳';
+
+            try {
+                // First check if already in favorites
+                const listResponse = await fetch('/api/v1/favorites/list', {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+
+                if (!listResponse.ok) {
+                    throw new Error('Failed to check favorites');
+                }
+
+                const listData = await listResponse.json();
+                const isCurrentlyFavorite = listData.success &&
+                    listData.data && listData.data.some(item => item.research_id === researchId);
+
+                let response;
+                if (isCurrentlyFavorite) {
+                    // Remove from favorites
+                    response = await fetch('/api/v1/favorites/remove', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        credentials: 'include',
+                        body: JSON.stringify({ research_id: researchId })
+                    });
+                } else {
+                    // Add to favorites
+                    response = await fetch('/api/v1/favorites/add', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        credentials: 'include',
+                        body: JSON.stringify({ research_id: researchId })
+                    });
+                }
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.success) {
+                    if (isCurrentlyFavorite) {
+                        btn.textContent = '☆';
+                        btn.classList.remove('in-favorites');
+                        btn.title = 'Добавить в избранное';
+                    } else {
+                        btn.textContent = '★';
+                        btn.classList.add('in-favorites');
+                        btn.title = 'В избранном';
+                    }
+                } else {
+                    btn.textContent = '❌';
+                    console.error('Favorites error:', result.error);
+                    setTimeout(() => { btn.textContent = originalText; }, 2000);
+                }
+            } catch (error) {
+                console.error('Favorites network error:', error);
+                btn.textContent = '❌';
+                setTimeout(() => { btn.textContent = originalText; }, 2000);
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        async function checkFavoriteStatus() {
+            const btn = document.getElementById('favoriteBtn');
+            const researchId = '2506.16064';
+
+            if (!btn || !researchId) return;
+
+            try {
+                const response = await fetch('/api/v1/favorites/list', {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.data) {
+                        const isInFavorites = data.data.some(item => item.research_id === researchId);
+                        if (isInFavorites) {
+                            btn.textContent = '★';
+                            btn.classList.add('in-favorites');
+                            btn.title = 'В избранном';
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking favorite status:', error);
+            }
+        }
+
+        // Tab Switching with URL hash support
+        function switchTab(tabName, updateHash = true) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            const targetTab = document.querySelector(`[data-tab="${tabName}"]`);
+            if (!targetTab) return; // Tab doesn't exist
+            targetTab.classList.add('active');
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+
+            const keyResultBlock = document.querySelector('.key-result-block');
+            if (keyResultBlock) {
+                keyResultBlock.style.display = tabName === 'summary' ? 'block' : 'none';
+            }
+
+            // Update URL hash (skip for summary - it's default)
+            if (updateHash) {
+                if (tabName === 'summary') {
+                    history.replaceState(null, '', window.location.pathname);
+                } else {
+                    history.replaceState(null, '', `#${tabName}`);
+                }
+            }
+        }
+
+        // Handle URL hash on page load and hash change
+        function handleHashNavigation() {
+            const hash = window.location.hash.slice(1); // Remove #
+            const validTabs = ['summary', 'digest', 'concepts', 'simple'];
+            if (hash && validTabs.includes(hash)) {
+                switchTab(hash, false); // Don't update hash again
+            }
+        }
+
+        // Listen for hash changes (back/forward navigation)
+        window.addEventListener('hashchange', handleHashNavigation);
+
+        // Check hash on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            handleHashNavigation();
+        });
+
+        // Sidebar Tab Switching
+        function switchSidebarTab(tabName) {
+            document.querySelectorAll('.sidebar-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            document.querySelectorAll('.sidebar-tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(`sidebar-${tabName}`).classList.add('active');
+        }
+
+        // Mobile Sidebar
+        function openSidebar() {
+            const sidebar = document.querySelector('.sidebar-right');
+            sidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebar() {
+            const sidebar = document.querySelector('.sidebar-right');
+            sidebar.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Copy code block
+        function copyCodeBlock(button) {
+            const codeBlock = button.closest('pre').querySelector('code');
+            if (codeBlock) {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    const originalText = button.textContent;
+                    button.textContent = 'Скопировано!';
+                    setTimeout(() => button.textContent = originalText, 2000);
+                });
+            }
+        }
+
+// ========================================
+        // ADAPTATION & PROMPT BUTTONS
+        // ========================================
+
+        let adaptTimerInterval = null;
+        let promptTimerInterval = null;
+        let adaptStartTime = 0;
+        let promptStartTime = 0;
+
+        // Store internal_generation_id for PDF download
+        let currentInternalGenerationId = null;
+
+        function formatTimer(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+        }
+
+        function setButtonLoading(btn, isLoading, timerId, timerInterval) {
+            const btnText = btn.querySelector('.btn-text');
+            const btnLoading = btn.querySelector('.btn-loading');
+            
+            if (isLoading) {
+                btn.disabled = true;
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-flex';
+            } else {
+                btn.disabled = false;
+                btnText.style.display = 'inline-flex';
+                btnLoading.style.display = 'none';
+                if (timerInterval) clearInterval(timerInterval);
+            }
+        }
+
+        function lockAllButtons(lock) {
+            const adaptBtn = document.getElementById('adapt-btn');
+            const promptBtn = document.getElementById('prompt-btn');
+            if (lock) {
+                adaptBtn.disabled = true;
+                promptBtn.disabled = true;
+            } else {
+                adaptBtn.disabled = false;
+                promptBtn.disabled = false;
+            }
+        }
+
+        // Adaptation form submit
+        document.getElementById('adaptation-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const userRequest = document.getElementById('user-request').value.trim();
+            if (!userRequest) {
+                alert('Введите запрос');
+                return;
+            }
+
+            const adaptBtn = document.getElementById('adapt-btn');
+            const resultDiv = document.getElementById('adaptation-result');
+            const contentDiv = document.getElementById('adaptation-content');
+
+            lockAllButtons(true);
+            setButtonLoading(adaptBtn, true, 'adapt-timer', adaptTimerInterval);
+            
+            // Start timer
+            adaptStartTime = 0;
+            const timerEl = document.getElementById('adapt-timer');
+            adaptTimerInterval = setInterval(() => {
+                adaptStartTime++;
+                timerEl.textContent = formatTimer(adaptStartTime);
+            }, 1000);
+
+            try {
+                const response = await fetch('/api/v1/research/adapt/2506.16064', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        research_id: '2506.16064',
+                        user_request: userRequest,
+                        model: document.getElementById('model-select').value
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Convert markdown to HTML using marked.js
+                    console.log('Raw adapted_content:', data.adapted_content);
+                    let rawContent = data.adapted_content || '';
+
+                    // Fix LLM markdown bugs
+                    // 1. Fix duplicate header markers: ### #### -> ####, ## ### -> ###
+                    rawContent = rawContent.replace(/^#{1,6}\s+#{1,6}\s/gm, (match) => {
+                        // Count hashes in second group and use that
+                        const secondGroup = match.match(/\s(#+)\s/);
+                        return secondGroup ? secondGroup[1] + ' ' : match;
+                    });
+
+
+                    // HTML entity cleanup
+                    rawContent = rawContent.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+
+                    console.log('Cleaned content (first 500 chars):', rawContent.substring(0, 500));
+                    console.log('Has headers (##):', /^#{1,6}\s/m.test(rawContent));
+                    console.log('Has code blocks:', rawContent.includes('```'));
+
+                    const htmlContent = marked.parse(rawContent);
+                    console.log('Parsed HTML (first 500 chars):', htmlContent.substring(0, 500));
+                    console.log('HTML has h2 tags:', htmlContent.includes('<h2>'));
+                    console.log('HTML has h3 tags:', htmlContent.includes('<h3>'));
+                    console.log('HTML has h4 tags:', htmlContent.includes('<h4>'));
+                    console.log('HTML has pre tags:', htmlContent.includes('<pre>'));
+                    contentDiv.innerHTML = htmlContent;
+                    resultDiv.style.display = 'block';
+                    enhanceCodeBlocks();
+
+                    // Store internal_generation_id for PDF download
+                    currentInternalGenerationId = data.internal_generation_id;
+                    console.log('Stored internal_generation_id:', currentInternalGenerationId);
+
+                    
+                    // Update result header
+                    const resultHeader = resultDiv.querySelector('.result-header h3');
+                    if (resultHeader) resultHeader.textContent = 'Результат адаптации';
+                    
+                    resultDiv.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Ошибка: ' + (data.error || 'Неизвестная ошибка'));
+                }
+            } catch (error) {
+                alert('Ошибка соединения: ' + error.message);
+            } finally {
+                clearInterval(adaptTimerInterval);
+                setButtonLoading(adaptBtn, false, 'adapt-timer', null);
+                lockAllButtons(false);
+                document.getElementById('adapt-timer').textContent = '00:00';
+            }
+        });
+
+        // Prompt generation button
+        document.getElementById('prompt-btn').addEventListener('click', async function() {
+            const userRequest = document.getElementById('user-request').value.trim();
+            if (!userRequest) {
+                alert('Введите запрос для создания промпта');
+                return;
+            }
+
+            const promptBtn = document.getElementById('prompt-btn');
+            const resultDiv = document.getElementById('adaptation-result');
+            const contentDiv = document.getElementById('adaptation-content');
+
+            lockAllButtons(true);
+            setButtonLoading(promptBtn, true, 'prompt-timer', promptTimerInterval);
+            
+            // Start timer
+            promptStartTime = 0;
+            const timerEl = document.getElementById('prompt-timer');
+            promptTimerInterval = setInterval(() => {
+                promptStartTime++;
+                timerEl.textContent = formatTimer(promptStartTime);
+            }, 1000);
+
+            try {
+                const response = await fetch('/api/v1/research/generate-prompt/2506.16064', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        research_id: '2506.16064',
+                        user_request: userRequest,
+                        model: document.getElementById('model-select').value
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Get prompt and explanation directly from response
+                    console.log('Raw prompt_content:', data.prompt_content);
+                    console.log('Raw explanation_content:', data.explanation_content);
+
+                    const promptText = data.prompt_content || '';
+                    const explanationText = data.explanation_content || '';
+
+                    console.log('Prompt (first 200 chars):', promptText.substring(0, 200));
+                    console.log('Explanation (first 200 chars):', explanationText.substring(0, 200));
+
+                    // Build formatted content
+                    let formattedContent = '';
+
+                    // Add explanation if present
+                    if (explanationText) {
+                        let cleanExplanation = explanationText;
+                        cleanExplanation = cleanExplanation.replace(/^#{1,6}\s+#{1,6}\s/gm, (match) => {
+                            const secondGroup = match.match(/\s(#+)\s/);
+                            return secondGroup ? secondGroup[1] + ' ' : match;
+                        });
+                        cleanExplanation = cleanExplanation.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+                        formattedContent += marked.parse(cleanExplanation);
+                    }
+
+                    // Add the prompt itself in a styled code block
+                    if (promptText) {
+                        formattedContent += '<div class="generated-prompt-block" style="margin-top: 24px;">';
+                        formattedContent += '<h3 style="color: #667eea; margin-bottom: 12px;">📝 Готовый промпт</h3>';
+                        formattedContent += '<div class="prompt-code-container" style="position: relative; background: #0f172a; border-radius: 8px; overflow: hidden;">';
+                        formattedContent += '<div class="prompt-code-header" style="background: #1e293b; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">';
+                        formattedContent += '<span style="color: #94a3b8; font-size: 12px;">PROMPT</span>';
+                        formattedContent += '<button onclick="copyPromptText(this)" class="copy-prompt-btn" style="background: #667eea; color: white; border: none; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;">Копировать</button>';
+                        formattedContent += '</div>';
+                        formattedContent += '<pre style="margin: 0; padding: 16px; overflow-x: auto; background: transparent;"><code class="prompt-text" style="color: #e2e8f0; white-space: pre-wrap; word-wrap: break-word; font-family: monospace; font-size: 13px; line-height: 1.6;">' + promptText.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</code></pre>';
+                        formattedContent += '</div>';
+                        formattedContent += '</div>';
+                    }
+
+                    contentDiv.innerHTML = formattedContent;
+                    resultDiv.style.display = 'block';
+                    enhanceCodeBlocks();
+
+                    // Store internal_generation_id for PDF download
+                    currentInternalGenerationId = data.internal_generation_id;
+                    console.log('Stored internal_generation_id:', currentInternalGenerationId);
+
+                    // Update result header
+                    const resultHeader = resultDiv.querySelector('.result-header h3');
+                    if (resultHeader) resultHeader.textContent = 'Сгенерированный промпт';
+                    
+                    resultDiv.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Ошибка: ' + (data.error || 'Неизвестная ошибка'));
+                }
+            } catch (error) {
+                alert('Ошибка соединения: ' + error.message);
+            } finally {
+                clearInterval(promptTimerInterval);
+                setButtonLoading(promptBtn, false, 'prompt-timer', null);
+                lockAllButtons(false);
+                document.getElementById('prompt-timer').textContent = '00:00';
+            }
+        });
+
+        // Copy prompt text to clipboard
+        function copyPromptText(btn) {
+            const codeEl = btn.closest('.prompt-code-container').querySelector('.prompt-text');
+            if (codeEl) {
+                navigator.clipboard.writeText(codeEl.textContent).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Скопировано!';
+                    btn.style.background = '#22c55e';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '#667eea';
+                    }, 2000);
+                });
+            }
+        }
+
+        function copyAdaptationResult() {
+            const content = document.getElementById('adaptation-content').innerText;
+            navigator.clipboard.writeText(content).then(() => {
+                const btn = document.querySelector('.action-btn span');
+                if (btn) {
+                    const original = btn.textContent;
+                    btn.textContent = 'Скопировано!';
+                    setTimeout(() => btn.textContent = original, 2000);
+                }
+            });
+        }
+
+        // Process code blocks after render
+        function enhanceCodeBlocks() {
+            const contentDiv = document.getElementById('adaptation-content');
+            if (!contentDiv) return;
+
+            // First, convert blockquotes containing prompts to code blocks
+            enhancePromptBlockquotes(contentDiv);
+
+            const preBlocks = contentDiv.querySelectorAll('pre');
+            preBlocks.forEach((pre, index) => {
+                // Skip if already enhanced
+                if (pre.querySelector('.code-block-header')) return;
+
+                const code = pre.querySelector('code');
+                const codeText = code ? code.textContent.trim() : '';
+
+                // SHORT CODE THRESHOLD: Skip header for short code blocks (< 80 chars)
+                // These stay as simple styled blocks without copy button
+                if (codeText.length < 80) {
+                    pre.style.background = '#0f172a';
+                    pre.style.borderRadius = '6px';
+                    pre.style.padding = '8px 12px';
+                    pre.style.margin = '0.5em 0';
+                    pre.style.overflow = 'auto';
+                    if (code) {
+                        code.style.color = '#e2e8f0';
+                        code.style.fontFamily = 'monospace';
+                        code.style.fontSize = '13px';
+                        code.style.whiteSpace = 'pre-wrap';
+                        code.style.wordBreak = 'break-word';
+                    }
+                    return; // Skip adding header
+                }
+
+                const langClass = code ? Array.from(code.classList).find(c => c.startsWith('language-')) : null;
+                const lang = langClass ? langClass.replace('language-', '').toUpperCase() : 'CODE';
+
+                // Create header (only for long code blocks)
+                const header = document.createElement('div');
+                header.className = 'code-block-header';
+                header.innerHTML = `
+                    <span class="code-block-lang">${lang}</span>
+                    <button type="button" class="code-copy-btn" onclick="copyCodeBlock(this)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Копировать</span>
+                    </button>
+                `;
+
+                pre.style.position = 'relative';
+                pre.insertBefore(header, pre.firstChild);
+            });
+        }
+
+        // Convert blockquotes and inline quoted prompts to styled code blocks
+        function enhancePromptBlockquotes(contentDiv) {
+            // 1. Handle blockquotes
+            const blockquotes = contentDiv.querySelectorAll('blockquote');
+            blockquotes.forEach(bq => {
+                const prevEl = bq.previousElementSibling;
+                const isPrompt = prevEl && /промпт/i.test(prevEl.textContent);
+                const bqText = bq.textContent.trim();
+                const looksLikePrompt = bqText.length > 20;
+
+                if (isPrompt || looksLikePrompt) {
+                    bq.parentNode.replaceChild(createPromptCodeBlock(bqText), bq);
+                }
+            });
+
+            // 2. Handle inline prompts - any quoted text that looks like a prompt
+            const allElements = contentDiv.querySelectorAll('li, p');
+            allElements.forEach(el => {
+                // Skip if already has a code block inside
+                if (el.querySelector('pre')) return;
+
+                let html = el.innerHTML;
+                let modified = false;
+
+                // Pattern: "quoted text" where text is > 30 chars and looks like a prompt
+                // Match quotes that start with action words or look like instructions
+                const quoteRegex = /"([^"]{30,})"/g;
+                const matches = [...html.matchAll(quoteRegex)];
+
+                matches.forEach(match => {
+                    const fullMatch = match[0];
+                    const quotedText = match[1];
+
+                    // Check if this looks like a prompt (action verbs, instructions, etc.)
+                    const looksLikePrompt = /^(Проанализируй|Предложи|Разработай|Оцени|Напиши|Создай|Сгенерируй|Объясни|Помоги|Опиши|Найди|Выдели|Представь|Учитывая|Перед ответом|Вот моя|Отличн|Хорош|Неплох|Можешь гордиться|Теперь)/i.test(quotedText) ||
+                                          quotedText.includes('ключев') ||
+                                          quotedText.includes('контент') ||
+                                          quotedText.includes('SEO') ||
+                                          quotedText.includes('запрос') ||
+                                          quotedText.includes('статью') ||
+                                          quotedText.includes('топ-') ||
+                                          quotedText.includes('вариант') ||
+                                          quotedText.includes('семантическ');
+
+                    if (looksLikePrompt) {
+                        modified = true;
+                        const codeBlock = createPromptCodeBlockHTML(quotedText);
+                        html = html.replace(fullMatch, codeBlock);
+                    }
+                });
+
+                if (modified) {
+                    el.innerHTML = html;
+                }
+            });
+        }
+
+        function createPromptCodeBlock(text) {
+            const pre = document.createElement('pre');
+            pre.style.cssText = 'background: #0f172a; border-radius: 8px; margin: 1em 0; overflow: hidden; position: relative;';
+
+            const header = document.createElement('div');
+            header.className = 'code-block-header';
+            header.innerHTML = `
+                <span class="code-block-lang">PROMPT</span>
+                <button type="button" class="code-copy-btn" onclick="copyCodeBlock(this)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                        <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Копировать</span>
+                </button>
+            `;
+
+            const code = document.createElement('code');
+            code.style.cssText = 'display: block; padding: 16px; color: #e2e8f0; white-space: pre-wrap; word-wrap: break-word; font-family: monospace; font-size: 13px; line-height: 1.6;';
+            let promptText = text.trim();
+            if (promptText.startsWith('"')) promptText = promptText.slice(1);
+            if (promptText.endsWith('"')) promptText = promptText.slice(0, -1);
+            code.textContent = promptText;
+
+            pre.appendChild(header);
+            pre.appendChild(code);
+            return pre;
+        }
+
+        function createPromptCodeBlockHTML(text) {
+            let promptText = text.trim();
+            const escapedText = promptText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            return `<pre style="background: #0f172a; border-radius: 8px; margin: 0.5em 0; overflow: hidden; position: relative;">
+                <div class="code-block-header">
+                    <span class="code-block-lang">PROMPT</span>
+                    <button type="button" class="code-copy-btn" onclick="copyCodeBlock(this)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Копировать</span>
+                    </button>
+                </div>
+                <code style="display: block; padding: 16px; color: #e2e8f0; white-space: pre-wrap; word-wrap: break-word; font-family: monospace; font-size: 13px; line-height: 1.6;">${escapedText}</code>
+            </pre>`;
+        }
+
+        
+        function copyCodeBlock(btn) {
+            const pre = btn.closest('pre');
+            const code = pre.querySelector('code');
+            if (!code) return;
+
+            navigator.clipboard.writeText(code.textContent).then(() => {
+                btn.classList.add('copied');
+                const span = btn.querySelector('span');
+                span.textContent = 'Скопировано!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    span.textContent = 'Копировать';
+                }, 2000);
+            });
+        }
+
+        function downloadAdaptationHTML() {
+            const contentEl = document.getElementById('adaptation-content');
+            const title = document.getElementById('adaptation-title').textContent;
+            const researchTitle = 'Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через';
+            const researchId = '2506.16064';
+            const researchUrl = 'https://novasapiens.ru/prompt/' + researchId;
+
+            // Clean content - remove code-block-header divs from exported HTML
+            let content = contentEl.innerHTML;
+            content = content.replace(/<div class="code-block-header">[\s\S]*?<\/div>/g, '');
+
+            const htmlTemplate = `<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} - ${researchTitle}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .header {
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .header .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 14px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 6px;
+            margin-top: 12px;
+            transition: all 0.2s ease;
+        }
+        .header .source-link:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+        .content h1, .content h2 {
+            color: #1e293b;
+            margin: 28px 0 16px;
+            font-weight: 600;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .content h1 { font-size: 22px; }
+        .content h2 { font-size: 18px; }
+        .content h3 { font-size: 16px; color: #334155; margin: 24px 0 12px; }
+        .content h4 { font-size: 14px; color: #475569; margin: 20px 0 10px; }
+        .content p { margin: 0 0 16px; color: #475569; }
+        .content ul, .content ol { margin: 16px 0; padding-left: 24px; }
+        .content li { margin-bottom: 8px; color: #475569; }
+        .content strong { color: #1e293b; }
+        .content em { color: #64748b; }
+        .content code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: #7c3aed;
+        }
+        .content pre {
+            position: relative;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .content pre code {
+            display: block;
+            background: transparent;
+            color: #334155;
+            padding: 16px 20px;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .copy-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        .content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            margin: 20px 0;
+            color: #64748b;
+            font-style: italic;
+            background: #f8fafc;
+            padding: 16px 16px 16px 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+        }
+        .footer-brand {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .footer-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .footer-link.tg-channel {
+            background: linear-gradient(135deg, #0088cc 0%, #0077b5 100%);
+        }
+        .footer-link.tg-bot {
+            background: linear-gradient(135deg, #34a853 0%, #1e8e3e 100%);
+        }
+        .footer-date {
+            margin-top: 16px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>${title}</h1>
+            <div class="subtitle">На основе исследования: ${researchTitle}</div>
+            <a href="${researchUrl}" target="_blank" class="source-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Открыть оригинал исследования
+            </a>
+        </div>
+        <div class="content">
+            ${content}
+        </div>
+        <div class="footer">
+            <div class="footer-brand">Создано с помощью Nova Sapiens Research Platform</div>
+            <div class="footer-links">
+                <a href="https://t.me/nova_sapiens" target="_blank" class="footer-link tg-channel">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.331.015.098.034.32.019.493z"/>
+                    </svg>
+                    Канал Nova Sapiens
+                </a>
+                <a href="https://t.me/NovaSapiensBot" target="_blank" class="footer-link tg-bot">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.331.015.098.034.32.019.493z"/>
+                    </svg>
+                    Бот NovaSapiensBot
+                </a>
+            </div>
+            <div class="footer-date">Сгенерировано ${new Date().toLocaleDateString('ru-RU', {day: 'numeric', month: 'long', year: 'numeric'})}</div>
+        </div>
+    </div>
+    <script>
+        // Add copy buttons to all pre blocks
+        document.querySelectorAll('pre').forEach(pre => {
+            const btn = document.createElement('button');
+            btn.className = 'copy-btn';
+            btn.textContent = 'Копировать';
+            btn.onclick = function() {
+                const code = pre.querySelector('code');
+                navigator.clipboard.writeText(code.textContent).then(() => {
+                    btn.textContent = 'Скопировано!';
+                    setTimeout(() => btn.textContent = 'Копировать', 2000);
+                });
+            };
+            pre.appendChild(btn);
+        });
+    <\/script>
+</body>
+</html>`;
+
+            const blob = new Blob([htmlTemplate], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'adaptation_2506.16064.html';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadAdaptationPDF() {
+            if (!currentInternalGenerationId) {
+                alert('Нет данных для экспорта в PDF. Сначала сгенерируйте адаптацию или промпт.');
+                return;
+            }
+
+            // Call server-side PDF generation endpoint
+            const pdfUrl = `/api/v1/adaptation-pdf/${currentInternalGenerationId}`;
+
+            // Open PDF in new tab or download
+            window.open(pdfUrl, '_blank');
+        }
+
+        // Legacy function kept for reference (html2pdf.js version - replaced by WeasyPrint)
+        function downloadAdaptationPDF_legacy() {
+            const contentEl = document.getElementById('adaptation-content');
+            const title = document.getElementById('adaptation-title').textContent;
+            const researchTitle = 'Самокритика Управляемое Любопытство Уточнение Улучшение Честности и Полезности в Больших Языковых Моделях через';
+            const researchId = '2506.16064';
+
+            // Debug: check if content exists
+            console.log('PDF Debug - contentEl:', contentEl);
+            console.log('PDF Debug - contentEl.innerHTML length:', contentEl ? contentEl.innerHTML.length : 'null');
+
+            if (!contentEl || !contentEl.innerHTML || contentEl.innerHTML.trim() === '') {
+                alert('Нет контента для экспорта в PDF. Сначала сгенерируйте адаптацию.');
+                return;
+            }
+
+            // Create temporary container for PDF - make it visible for rendering
+            const pdfContainer = document.createElement('div');
+            pdfContainer.style.cssText = 'position: fixed; left: 0; top: 0; width: 700px; font-family: Inter, sans-serif; background: white; z-index: 9999;';
+
+            // Clean content
+            let cleanContent = contentEl.innerHTML;
+            cleanContent = cleanContent.replace(/<div class="code-block-header">[\s\S]*?<\/div>/g, '');
+            console.log('PDF Debug - cleanContent length:', cleanContent.length);
+
+            pdfContainer.innerHTML = `
+                <div style="padding: 40px; background: white;">
+                    <div style="border-bottom: 3px solid #667eea; padding-bottom: 20px; margin-bottom: 30px;">
+                        <h1 style="font-size: 22px; color: #667eea; margin: 0 0 10px 0; font-weight: 600;">${title}</h1>
+                        <p style="font-size: 13px; color: #64748b; margin: 0;">На основе исследования: ${researchTitle}</p>
+                        <p style="font-size: 12px; color: #667eea; margin: 10px 0 0 0;">
+                            <a href="https://novasapiens.ru/prompt/${researchId}" style="color: #667eea;">novasapiens.ru/prompt/${researchId}</a>
+                        </p>
+                    </div>
+                    <div class="pdf-content" style="font-size: 14px; line-height: 1.7; color: #334155;">
+                        ${cleanContent}
+                    </div>
+                    <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center;">
+                        <p style="font-size: 12px; color: #64748b; margin: 0 0 10px 0;">Создано с помощью Nova Sapiens Research Platform</p>
+                        <p style="font-size: 11px; color: #94a3b8; margin: 0;">
+                            Telegram: <a href="https://t.me/nova_sapiens" style="color: #667eea;">@nova_sapiens</a> |
+                            Бот: <a href="https://t.me/NovaSapiensBot" style="color: #667eea;">@NovaSapiensBot</a>
+                        </p>
+                    </div>
+                </div>
+                <style>
+                    .pdf-content h1, .pdf-content h2 { color: #1e293b; margin: 24px 0 12px; font-weight: 600; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; }
+                    .pdf-content h1 { font-size: 20px; }
+                    .pdf-content h2 { font-size: 17px; }
+                    .pdf-content h3 { font-size: 15px; color: #334155; margin: 20px 0 10px; }
+                    .pdf-content h4 { font-size: 14px; color: #475569; margin: 16px 0 8px; }
+                    .pdf-content p { margin: 0 0 14px; }
+                    .pdf-content ul, .pdf-content ol { margin: 14px 0; padding-left: 24px; }
+                    .pdf-content li { margin-bottom: 8px; }
+                    .pdf-content strong { color: #1e293b; }
+                    .pdf-content code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; color: #7c3aed; }
+                    .pdf-content pre { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin: 16px 0; overflow: hidden; }
+                    .pdf-content pre code { background: transparent; padding: 0; display: block; white-space: pre-wrap; word-break: break-word; font-size: 11px; line-height: 1.5; color: #334155; }
+                    .pdf-content blockquote { border-left: 4px solid #667eea; padding-left: 16px; margin: 16px 0; color: #64748b; font-style: italic; }
+                </style>
+            `;
+
+            document.body.appendChild(pdfContainer);
+
+            // PDF options
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'adaptation_' + researchId + '.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            // Generate and download PDF
+            console.log('PDF Debug - Starting html2pdf generation...');
+            console.log('PDF Debug - pdfContainer HTML length:', pdfContainer.innerHTML.length);
+
+            html2pdf().set(opt).from(pdfContainer).save().then(() => {
+                console.log('PDF Debug - PDF generated successfully');
+                document.body.removeChild(pdfContainer);
+            }).catch(err => {
+                console.error('PDF generation error:', err);
+                document.body.removeChild(pdfContainer);
+                alert('Ошибка генерации PDF: ' + err.message);
+            });
+        }
+
+
+        // ========================================
+        // SORT FUNCTIONS
+        // ========================================
+
+        let currentSort = 'date';  // 'date' or 'rating'
+        let currentOrder = 'desc'; // 'asc' or 'desc'
+        let currentOffset = 36;  // Current loaded count
+        let currentMonth = '2025-06';  // Month of current article
+        let isLoading = false;
+
+        async function loadMore() {
+            if (isLoading) return;
+            isLoading = true;
+
+            const btn = document.querySelector('.btn-load-more');
+            const loadText = btn.querySelector('.load-text');
+            const originalText = loadText.textContent;
+            loadText.textContent = 'Загрузка...';
+            btn.disabled = true;
+
+            const params = new URLSearchParams();
+            params.set('sort_by', currentSort);
+            params.set('sort_order', currentOrder);
+            params.set('rating_min', minRating);
+            params.set('rating_max', maxRating);
+            params.set('offset', currentOffset);
+            params.set('limit', 20);
+            params.set('current_id', '2506.16064');
+
+            // Use current month if no other filters active
+            if (currentMonth) {
+                params.set('month', currentMonth);
+            }
+
+            // Include filter selections if any
+            document.querySelectorAll('#capabilitySelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('capability', cb.value);
+            });
+            document.querySelectorAll('#domainSelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('domain', cb.value);
+            });
+            document.querySelectorAll('#patternSelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('pattern', cb.value);
+            });
+            document.querySelectorAll('#monthYearSelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('month', cb.value);
+            });
+
+            try {
+                const response = await fetch('/api/admin-preview/filter-articles?' + params.toString());
+                const data = await response.json();
+
+                if (data.success && data.articles && data.articles.length > 0) {
+                    const articleList = document.querySelector('.article-list');
+
+                    data.articles.forEach(article => {
+                        const isActive = article.id === '2506.16064' ? 'active' : '';
+                        const ratingClass = getRatingClass(article.rating);
+                        const title = article.title_ru;
+
+                        const articleHtml = `
+                            <a href="/prompt/${article.id}" class="article-item ${isActive}">
+                                <span class="article-score ${ratingClass}">${article.rating || '—'}</span>
+                                <div class="article-info">
+                                    <span class="article-title" title="${article.title_ru}">${title}</span>
+                                    <span class="article-date">${article.publication_date || ''}</span>
+                                </div>
+                            </a>
+                        `;
+                        articleList.insertAdjacentHTML('beforeend', articleHtml);
+                    });
+
+                    currentOffset += data.articles.length;
+                    const countEl = document.getElementById('articleCount');
+                    console.log('Updating count:', currentOffset, 'element:', countEl);
+                    if (countEl) {
+                        countEl.textContent = currentOffset + ' статей';
+                    }
+
+                    // Hide button if no more articles
+                    if (data.articles.length < 20) {
+                        btn.style.display = 'none';
+                    }
+                } else {
+                    btn.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Load more error:', error);
+            }
+
+            loadText.textContent = originalText;
+            btn.disabled = false;
+            isLoading = false;
+        }
+
+        function toggleSort(field) {
+            const buttons = document.querySelectorAll('.sort-btn');
+
+            if (currentSort === field) {
+                // Toggle order if same field
+                currentOrder = currentOrder === 'desc' ? 'asc' : 'desc';
+            } else {
+                // Switch field, default to desc
+                currentSort = field;
+                currentOrder = 'desc';
+            }
+
+            // Update button states
+            buttons.forEach(btn => {
+                const btnField = btn.dataset.sort;
+
+                if (btnField === currentSort) {
+                    btn.classList.add('active');
+                    btn.dataset.direction = currentOrder;
+                } else {
+                    btn.classList.remove('active');
+                    btn.dataset.direction = 'desc'; // Reset for next activation
+                }
+            });
+
+            // Refresh article list with new sort
+            fetchSortedArticles();
+        }
+
+        async function fetchSortedArticles() {
+            const articleList = document.querySelector('.article-list');
+            const originalContent = articleList.innerHTML;
+
+            // Add opacity transition instead of loading spinner
+            articleList.style.opacity = '0.5';
+            articleList.style.pointerEvents = 'none';
+
+            const params = new URLSearchParams();
+            params.set('sort_by', currentSort);
+            params.set('sort_order', currentOrder);
+            params.set('rating_min', minRating);
+            params.set('rating_max', maxRating);
+            params.set('current_id', '2506.16064');
+
+            // Use current month if no filters selected
+            const monthChecked = document.querySelectorAll('#monthYearSelect input[type="checkbox"]:checked');
+            if (monthChecked.length === 0 && currentMonth) {
+                params.set('month', currentMonth);
+            }
+
+            // Include current filter selections
+            document.querySelectorAll('#capabilitySelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('capability', cb.value);
+            });
+            document.querySelectorAll('#domainSelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('domain', cb.value);
+            });
+            document.querySelectorAll('#patternSelect input[type="checkbox"]:checked').forEach(cb => {
+                params.append('pattern', cb.value);
+            });
+            monthChecked.forEach(cb => {
+                params.append('month', cb.value);
+            });
+
+            try {
+                const response = await fetch('/api/admin-preview/filter-articles?' + params.toString());
+                const data = await response.json();
+
+                if (data.success && data.articles) {
+                    let html = '';
+                    data.articles.forEach(article => {
+                        const isActive = article.id === '2506.16064' ? 'active' : '';
+                        const ratingClass = getRatingClass(article.rating);
+                        const title = article.title_ru;
+                        html += `
+                            <a href="/prompt/${article.id}" class="article-item ${isActive}">
+                                <span class="article-score ${ratingClass}">${article.rating || '—'}</span>
+                                <div class="article-info">
+                                    <span class="article-title" title="${article.title_ru}">${title}</span>
+                                    <span class="article-date">${article.publication_date || ''}</span>
+                                </div>
+                            </a>
+                        `;
+                    });
+
+                    if (data.articles.length === 0) {
+                        html = '<div class="no-articles">Статьи не найдены</div>';
+                    }
+
+                    articleList.innerHTML = html;
+
+                    // Reset offset and update counter
+                    currentOffset = data.articles.length;
+                    document.getElementById('articleCount').textContent = currentOffset + ' статей';
+
+                    // Show/hide load more button
+                    const loadMoreBtn = document.querySelector('.btn-load-more');
+                    if (loadMoreBtn) {
+                        loadMoreBtn.style.display = data.articles.length >= 50 ? '' : 'none';
+                    }
+                } else {
+                    console.error('Sort error:', data.error);
+                }
+            } catch (error) {
+                console.error('Sort fetch error:', error);
+            }
+
+            // Restore opacity
+            articleList.style.opacity = '1';
+            articleList.style.pointerEvents = '';
+        }
+
+        // ========================================
+        // FILTERS DRAWER FUNCTIONS
+        // ========================================
+
+        function toggleFiltersDrawer() {
+            const drawer = document.getElementById('filtersDrawer');
+            if (drawer.classList.contains('active')) {
+                closeFiltersDrawer();
+            } else {
+                openFiltersDrawer();
+            }
+        }
+
+        function openFiltersDrawer() {
+            const drawer = document.getElementById('filtersDrawer');
+            const overlay = document.getElementById('filtersOverlay');
+            const btn = document.querySelector('.filters-btn-full');
+
+            drawer.classList.add('active');
+            overlay.classList.add('active');
+            if (btn) btn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(function() {
+                initRatingSlider();
+            }, 50);
+        }
+
+        function closeFiltersDrawer() {
+            const drawer = document.getElementById('filtersDrawer');
+            const overlay = document.getElementById('filtersOverlay');
+            const btn = document.querySelector('.filters-btn-full');
+
+            drawer.classList.remove('active');
+            overlay.classList.remove('active');
+            if (btn) btn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Rating Slider Variables
+        let isDragging = false;
+        let currentHandle = null;
+        let minRating = 70;
+        let maxRating = 100;
+        let sliderInitialized = false;
+
+        document.addEventListener('keydown', (e) => {
+            const drawer = document.getElementById('filtersDrawer');
+            if (e.key === 'Escape' && drawer && drawer.classList.contains('active')) {
+                closeFiltersDrawer();
+            }
+        });
+
+        function valueToPercent(value) {
+            return ((value - 10) / 90) * 100;
+        }
+
+        function percentToValue(percent) {
+            return Math.round((percent / 100) * 90 + 10);
+        }
+
+        function updateSliderUI() {
+            const minPercent = valueToPercent(minRating);
+            const maxPercent = valueToPercent(maxRating);
+
+            const handleMin = document.getElementById('handleMin');
+            const handleMax = document.getElementById('handleMax');
+            const selectedRange = document.getElementById('selectedRange');
+            const ratingValues = document.getElementById('ratingValues');
+
+            if (!handleMin || !handleMax || !selectedRange || !ratingValues) return;
+
+            handleMin.style.left = minPercent + '%';
+            handleMax.style.left = maxPercent + '%';
+            selectedRange.style.left = minPercent + '%';
+            selectedRange.style.width = (maxPercent - minPercent) + '%';
+            ratingValues.textContent = `${minRating} - ${maxRating}`;
+        }
+
+        function initRatingSlider() {
+            const handleMin = document.getElementById('handleMin');
+            const handleMax = document.getElementById('handleMax');
+            const bar = document.getElementById('distributionBar');
+
+            if (!handleMin || !handleMax || !bar) return;
+
+            updateSliderUI();
+            if (sliderInitialized) return;
+
+            bar.addEventListener('click', function(e) {
+                if (e.target.classList.contains('rating-handle') || e.target.id === 'selectedRange') return;
+                const rect = bar.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percent = (x / rect.width) * 100;
+                const value = percentToValue(percent);
+
+                const distToMin = Math.abs(value - minRating);
+                const distToMax = Math.abs(value - maxRating);
+
+                if (distToMin < distToMax) {
+                    if (value < maxRating - 5) minRating = value;
+                } else {
+                    if (value > minRating + 5) maxRating = value;
+                }
+                updateSliderUI();
+            });
+
+            handleMin.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                isDragging = true;
+                currentHandle = 'min';
+                handleMin.style.cursor = 'grabbing';
+            });
+
+            handleMax.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                isDragging = true;
+                currentHandle = 'max';
+                handleMax.style.cursor = 'grabbing';
+            });
+
+            sliderInitialized = true;
+        }
+
+        function onDrag(event) {
+            if (!isDragging) return;
+            const bar = document.getElementById('distributionBar');
+            if (!bar) return;
+
+            const rect = bar.getBoundingClientRect();
+            let x = event.clientX - rect.left;
+            x = Math.max(0, Math.min(x, rect.width));
+
+            const percent = (x / rect.width) * 100;
+            const value = percentToValue(percent);
+
+            if (currentHandle === 'min') {
+                if (value < maxRating - 5 && value >= 10) {
+                    minRating = value;
+                    updateSliderUI();
+                }
+            } else if (currentHandle === 'max') {
+                if (value > minRating + 5 && value <= 100) {
+                    maxRating = value;
+                    updateSliderUI();
+                }
+            }
+        }
+
+        function stopDrag() {
+            isDragging = false;
+            currentHandle = null;
+            const handleMin = document.getElementById('handleMin');
+            const handleMax = document.getElementById('handleMax');
+            if (handleMin) handleMin.style.cursor = 'grab';
+            if (handleMax) handleMax.style.cursor = 'grab';
+        }
+
+        document.addEventListener('mousemove', onDrag);
+        document.addEventListener('mouseup', stopDrag);
+
+        function closeMonthSelect() {
+            const dropdown = document.getElementById('monthYearSelect');
+            if (!dropdown) return;
+            const header = dropdown.previousElementSibling;
+            dropdown.classList.remove('active');
+            if (header && header.classList) header.classList.remove('active');
+        }
+
+        function toggleMultiselect(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const header = dropdown.previousElementSibling;
+
+            document.querySelectorAll('.multiselect-dropdown').forEach(dd => {
+                if (dd.id !== dropdownId) {
+                    dd.classList.remove('active');
+                    dd.previousElementSibling.classList.remove('active');
+                }
+            });
+
+            dropdown.classList.toggle('active');
+            header.classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.multiselect-wrapper') && !e.target.closest('.multiselect-header')) {
+                document.querySelectorAll('.multiselect-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                    dropdown.previousElementSibling.classList.remove('active');
+                });
+            }
+        });
+
+        function filterMultiselectOptions(input) {
+            const searchTerm = input.value.toLowerCase();
+            const dropdown = input.closest('.multiselect-dropdown');
+            const options = dropdown.querySelectorAll('.multiselect-option');
+
+            options.forEach(option => {
+                const text = option.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    option.style.display = 'flex';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        }
+
+        function updateMultiselectPlaceholder(dropdownId, placeholderId) {
+            const dropdown = document.getElementById(dropdownId);
+            const placeholder = document.getElementById(placeholderId);
+            if (!dropdown || !placeholder) return;
+
+            const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]:checked');
+
+            if (checkboxes.length === 0) {
+                if (dropdownId === 'capabilitySelect') {
+                    placeholder.textContent = 'Выберите роли...';
+                } else if (dropdownId === 'domainSelect') {
+                    placeholder.textContent = 'Выберите области...';
+                } else if (dropdownId === 'patternSelect') {
+                    placeholder.textContent = 'Выберите паттерны...';
+                } else if (dropdownId === 'monthYearSelect') {
+                    placeholder.textContent = 'Выберите месяц...';
+                }
+            } else if (checkboxes.length === 1) {
+                const label = checkboxes[0].closest('.multiselect-option').querySelector('span').textContent;
+                placeholder.textContent = label;
+            } else {
+                placeholder.textContent = `Выбрано: ${checkboxes.length}`;
+            }
+        }
+
+        async function applyFilters() {
+            const filters = {
+                ratingMin: minRating,
+                ratingMax: maxRating,
+                capabilities: [],
+                domains: [],
+                patterns: [],
+                months: []
+            };
+
+            document.querySelectorAll('#capabilitySelect input[type="checkbox"]:checked').forEach(cb => {
+                filters.capabilities.push(cb.value);
+            });
+            document.querySelectorAll('#domainSelect input[type="checkbox"]:checked').forEach(cb => {
+                filters.domains.push(cb.value);
+            });
+            document.querySelectorAll('#patternSelect input[type="checkbox"]:checked').forEach(cb => {
+                filters.patterns.push(cb.value);
+            });
+            document.querySelectorAll('#monthYearSelect input[type="checkbox"]:checked').forEach(cb => {
+                filters.months.push(cb.value);
+            });
+
+            console.log('Applied Filters:', filters);
+
+            // Show loading state
+            const articleList = document.querySelector('.article-list');
+            const originalContent = articleList.innerHTML;
+            articleList.innerHTML = '<div class="loading-articles"><span class="loading-spinner"></span> Загрузка...</div>';
+
+            // Build URL params for AJAX request
+            const params = new URLSearchParams();
+            params.set('rating_min', filters.ratingMin);
+            params.set('rating_max', filters.ratingMax);
+            params.set('sort_by', currentSort);
+            params.set('sort_order', currentOrder);
+            if (filters.capabilities.length) params.set('capability', filters.capabilities.join(','));
+            if (filters.domains.length) params.set('domain', filters.domains.join(','));
+            if (filters.patterns.length) params.set('pattern', filters.patterns.join(','));
+            if (filters.months.length) params.set('month', filters.months.join(','));
+            params.set('current_id', '2506.16064');
+
+            try {
+                const response = await fetch('/api/admin-preview/filter-articles?' + params.toString());
+                const data = await response.json();
+
+                if (data.success && data.articles) {
+                    // Render filtered articles
+                    let html = '';
+                    data.articles.forEach(article => {
+                        const isActive = article.id === '2506.16064' ? 'active' : '';
+                        const ratingClass = getRatingClass(article.rating);
+                        const title = article.title_ru;
+                        html += `
+                            <a href="/prompt/${article.id}" class="article-item ${isActive}">
+                                <span class="article-score ${ratingClass}">${article.rating || '—'}</span>
+                                <div class="article-info">
+                                    <span class="article-title" title="${article.title_ru}">${title}</span>
+                                    <span class="article-date">${article.publication_date || ''}</span>
+                                </div>
+                            </a>
+                        `;
+                    });
+
+                    if (data.articles.length === 0) {
+                        html = '<div class="no-articles">Статьи не найдены</div>';
+                    }
+
+                    articleList.innerHTML = html;
+
+                    // Reset offset and update counter
+                    currentOffset = data.articles.length;
+                    document.getElementById('articleCount').textContent = currentOffset + ' статей';
+
+                    // Show/hide load more button
+                    const loadMoreBtn = document.querySelector('.btn-load-more');
+                    if (loadMoreBtn) {
+                        loadMoreBtn.style.display = data.articles.length >= 50 ? '' : 'none';
+                    }
+
+                    // Update filter count badge
+                    updateFilterBadge(data.total_count || data.articles.length);
+                } else {
+                    articleList.innerHTML = originalContent;
+                    console.error('Filter error:', data.error);
+                }
+            } catch (error) {
+                console.error('Filter fetch error:', error);
+                articleList.innerHTML = originalContent;
+            }
+
+            closeFiltersDrawer();
+        }
+
+        function getRatingClass(rating) {
+            if (!rating) return 'score-below';
+            if (rating >= 95) return 'score-supertop';
+            if (rating >= 90) return 'score-excellent';
+            if (rating >= 85) return 'score-great';
+            if (rating >= 80) return 'score-good';
+            if (rating >= 75) return 'score-above';
+            if (rating >= 70) return 'score-mid';
+            return 'score-below';
+        }
+
+        function updateFilterBadge(count) {
+            const btn = document.querySelector('.filters-btn-full');
+            let badge = btn.querySelector('.filter-count');
+            if (!badge) {
+                badge = document.createElement('span');
+                badge.className = 'filter-count';
+                btn.appendChild(badge);
+            }
+            badge.textContent = count;
+        }
+
+        function resetFilters() {
+            // Reset to defaults: rating 70-100, current month
+            minRating = 70;
+            maxRating = 100;
+            updateSliderUI();
+
+            // Uncheck all filter checkboxes
+            document.querySelectorAll('.multiselect-option input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+
+            // Check current month checkbox if exists
+            if (currentMonth) {
+                const monthCheckbox = document.querySelector('#monthYearSelect input[value="' + currentMonth + '"]');
+                if (monthCheckbox) {
+                    monthCheckbox.checked = true;
+                }
+            }
+
+            updateMultiselectPlaceholder('capabilitySelect', 'capabilityPlaceholder');
+            updateMultiselectPlaceholder('domainSelect', 'domainPlaceholder');
+            updateMultiselectPlaceholder('patternSelect', 'patternPlaceholder');
+            updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder');
+        });
+    </script>
+
+    <!-- Filters Drawer Overlay -->
+    <div class="drawer-overlay" id="filtersOverlay" onclick="closeFiltersDrawer()"></div>
+
+    <!-- Filters Drawer -->
+    <aside class="filters-drawer" id="filtersDrawer">
+        <div class="drawer-header">
+            <h2>Фильтры</h2>
+            <button class="drawer-close" onclick="closeFiltersDrawer()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                <span>Закрыть</span>
+            </button>
+        </div>
+
+        <div class="drawer-content">
+            <!-- Month-Year Selector -->
+            <div class="filter-section">
+                <label class="filter-label">Период публикации</label>
+                <div class="multiselect-wrapper">
+                    <div class="multiselect-header" onclick="toggleMultiselect('monthYearSelect')">
+                        <span class="multiselect-placeholder" id="monthYearPlaceholder">Выберите месяц...</span>
+                        <svg class="multiselect-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                    <div class="multiselect-dropdown" id="monthYearSelect">
+                        <div class="multiselect-options">
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2026-01" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Январь 2026</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2025-12" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Декабрь 2025</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2025-11" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Ноябрь 2025</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2025-10" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Октябрь 2025</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2025-09" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Сентябрь 2025</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="2025-08" onchange="updateMultiselectPlaceholder('monthYearSelect', 'monthYearPlaceholder')">
+                                <span>Август 2025</span>
+                            </label>
+                        </div>
+                        <div class="multiselect-apply-btn">
+                            <button onclick="closeMonthSelect()">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating Slider -->
+            <div class="filter-section" style="margin-bottom: 20px;">
+                <label class="filter-label">
+                    Рейтинг исследования
+                    <span class="filter-values" id="ratingValues">70 - 100</span>
+                </label>
+                <div class="rating-slider-container">
+                    <div class="rating-distribution">
+                        <div class="distribution-bar" id="distributionBar">
+                            <div class="selected-range" id="selectedRange" style="left: 66.67%; width: 33.33%;"></div>
+                            <div class="rating-handle" id="handleMin" style="left: 66.67%;"></div>
+                            <div class="rating-handle" id="handleMax" style="left: 100%;"></div>
+                        </div>
+                        <div class="distribution-labels">
+                            <span>10</span>
+                            <span>50</span>
+                            <span>70</span>
+                            <span>80</span>
+                            <span>90</span>
+                            <span>100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="filter-actions" style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <button class="btn btn-reset" onclick="resetFilters()">Сбросить</button>
+                <button class="btn btn-apply" onclick="applyFilters()">Применить</button>
+            </div>
+
+            <!-- Link to Catalog -->
+            <div class="filter-section" style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                <a href="/prompt" class="catalog-link" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s ease;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    Перейти в каталог (все фильтры)
+                </a>
+            </div>
+        </div>
+
+        <div class="drawer-footer" style="display: none;">
+            <button class="btn btn-reset" onclick="resetFilters()">Сбросить</button>
+            <button class="btn btn-apply" onclick="applyFilters()">Применить</button>
+        </div>
+    </aside>
+
+    <!-- Shared Footer Component -->
+<footer class="page-footer">
+    <div class="footer-container">
+        <div class="footer-column footer-brand">
+            <div class="footer-logo">
+                <div class="footer-logo-mark">
+                    <img src="/static/n.svg" alt="Nova Sapiens" width="32" height="32">
+                </div>
+                <span class="footer-logo-text">Nova Sapiens</span>
+            </div>
+            <p class="footer-tagline">Научные исследования AI.<br>Обработано и структурировано для практического применения.</p>
+            <div class="footer-stats-compact">
+                <div class="stat-compact">
+                    <span class="stat-number">3500+</span>
+                    <span class="stat-label">статей</span>
+                </div>
+                <div class="stat-compact">
+                    <span class="stat-number">89.2</span>
+                    <span class="stat-label">средний рейтинг</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Навигация</h4>
+            <ul class="footer-links">
+                <li><a href="/prompt">Все исследования</a></li>
+                <li><a href="/favorites">Избранное</a></li>
+                <li><a href="/profile">Профиль</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column footer-connect">
+            <h4 class="footer-heading">Связь</h4>
+            <p class="footer-author">Автор проекта:<br><strong>Александр Сухов</strong></p>
+            <a href="https://t.me/ainovasapiens" target="_blank" class="footer-telegram-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.121.099.155.232.171.326.016.094.036.307.02.473z"/>
+                </svg>
+                Telegram канал @ainovasapiens
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 Nova Sapiens Research Platform. Все права защищены.</p>
+        <div class="footer-meta">
+            <a href="/privacy">Политика конфиденциальности</a>
+            <span class="footer-divider">•</span>
+            <a href="/terms">Условия использования</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

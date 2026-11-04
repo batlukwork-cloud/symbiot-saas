@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "proof": "local Desktop and Telegram mock UI expose inbox/card and Human Gate accept creates draft only",
+  "desktop": {
+    "html_present": true,
+    "css_present": true,
+    "js_present": true,
+    "human_gate_button_present": true,
+    "browser_rendered": true,
+    "mobile_rendered": true,
+    "desktop_screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_mock_ui_desktop_2026-08-02.png",
+    "mobile_screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_mock_ui_mobile_2026-08-02.png"
+  },
+  "telegram": {
+    "inbox_message_present": true,
+    "accept_button_present": true,
+    "draft_message_present": true
+  },
+  "dispatch_event_id": "dispatch_evt_3f18c4eeea2fc88e",
+  "mission_contract_draft_id": "mission_contract_draft_6d44dd27101d9f95",
+  "runtime_started": false,
+  "blocked_reason": "MISSION_CONTRACT_DRAFT_ONLY",
+  "obsidian_writes": 0,
+  "model_calls": 0,
+  "production_touched": false,
+  "secrets_touched": false,
+  "supabase_live_touched": false,
+  "external_webhook_touched": false,
+  "real_personal_data_used": false,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false
+}

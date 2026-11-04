@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "proof": "local Dispatcher completes event to sandbox mission artifacts after Human Gate approvals",
+  "url_tested": "http://127.0.0.1:56411/",
+  "manual_url_tested": "http://127.0.0.1:8788/",
+  "dispatch_event_id": "dispatch_evt_3f18c4eeea2fc88e",
+  "mission_contract_draft_id": "mission_contract_draft_6d44dd27101d9f95",
+  "mission_run_id": "mission_run_cfd439d704d91cf4",
+  "local_runtime_started": true,
+  "runtime_scope": "local_sandbox_only",
+  "mission_folder": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\05_OBSIDIAN_BRIDGE\\sandbox_obsidian_vault\\02_Missions\\mission_dispatch_evt_3f18c4eeea2fc88e",
+  "artifact_count": 6,
+  "artifact_names": [
+    "00_mission_passport.md",
+    "01_mission_contract.md",
+    "02_result.md",
+    "03_evidence.md",
+    "04_reflection.md",
+    "mission_manifest.json"
+  ],
+  "screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_e2e_completed_2026-08-02.png",
+  "manual_url_screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_manual_url_8788_e2e_2026-08-02.png",
+  "production_touched": false,
+  "secrets_touched": false,
+  "supabase_live_touched": false,
+  "external_webhook_touched": false,
+  "real_personal_data_used": false,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false
+}

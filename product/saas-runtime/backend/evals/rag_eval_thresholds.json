@@ -1,0 +1,16 @@
+{
+  "version": "2026-07-01-g3",
+  "min_cases_before_client_pilot": 10,
+  "min_pass_rate": 0.85,
+  "min_mrr": 0.8,
+  "allowed_index_mode": "pgvector_live",
+  "fallback_allowed": false,
+  "required_provider_configured": true,
+  "required_provider_fallback_used": false,
+  "drift_warning_drop": 0.05,
+  "nist_ai_rmf_map": ["Govern", "Map", "Measure", "Manage"],
+  "notes": [
+    "MVP threshold validates engineering readiness, not full client-data readiness.",
+    "Client-data pilot requires larger domain eval set, PII controls, approval workflow and production provider governance."
+  ]
+}

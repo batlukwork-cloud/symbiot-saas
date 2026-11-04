@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "proof": "Sources screen connects/tests email spool and performs Telegram/email full-chain checks",
+  "sources_view_opened": true,
+  "telegram": {
+    "token_absent_handled": true,
+    "token_connect_endpoint": "POST /api/sources/telegram/connect",
+    "test_endpoint": "POST /api/sources/telegram/test",
+    "local_full_chain_pass": true,
+    "webhook_used": false
+  },
+  "email": {
+    "connect_endpoint": "POST /api/sources/email/connect",
+    "test_endpoint": "POST /api/sources/email/test",
+    "spool_connected": true,
+    "test_message_created": true,
+    "local_full_chain_pass": true
+  },
+  "full_chain_endpoint": "POST /api/sources/full-chain-test",
+  "screenshot": "D:\\01_ПРОДУКТЫ\\01_СИМБИОТ\\03_SAAS_РАЗРАБОТКА\\05_L4_РАЗРАБОТКА_ПРОИЗВОДСТВО\\10_DISPATCHER_MVP\\06_TESTS_EVIDENCE\\dispatcher_sources_screen_2026-08-02.png",
+  "secrets_written_to_files": false,
+  "production_touched": false,
+  "supabase_live_touched": false,
+  "external_webhook_touched": false,
+  "real_personal_data_used": false,
+  "readiness_changed": false,
+  "d1_tst_001_closed": false
+}
